@@ -1,0 +1,1882 @@
+<!DOCTYPE html> 
+
+<head>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.3.min.js" ></script>
+
+<link rel="stylesheet" href="css/proBar.css">
+
+
+
+
+        <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_0a16d"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "width": 1100,
+  "height": 500,
+  "symbol": "BITMEX:XBTUSD",
+  "interval": "60",
+  "timezone": "Etc/UTC",
+  "theme": "Dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "withdateranges": true,
+  "hide_side_toolbar": false,
+  "allow_symbol_change": true,
+  "studies": [
+    "BB@tv-basicstudies",
+    "RSI@tv-basicstudies"
+  ],
+  "watchlist": [
+    "BITMEX:XBT",
+    "BITMEX:ETHUSD"
+  ],
+  "container_id": "tradingview_0a16d"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+
+
+<style type="text/css">
+
+body {font-size:10pt; margin:0; padding:0;}
+
+
+
+
+.chat_btn {-webkit-appearance: none;display:inline-block; height:20px;width:40px;padding:0 0px 0; background-color:#ffffff; font-size:11px; color:#333333; line-height:20px;border-radius: 2px;vertical-align:middle;border: 1px solid #dedede; background-color:#ffffff;}
+.chat_input {-webkit-appearance: none;display:inline-block; height:31px;width:333px; padding:0 10px 0; border:1px solid #d6d6d6; background-color:#ffffff; font-size:11px; color:#333333; line-height:31px;border-radius: 3px;vertical-align:middle}
+
+    .css_key {
+
+        color:#6da0fd;width:30px;height:30px;
+        border-radius:15px;border:1px solid #000;
+         background:linear-gradient( to bottom, #555, #111 );
+         cursor:pointer;
+    }
+    .css_key:hover {
+
+        color:#fff;
+    }
+
+    .st_money {
+        font-family:Tahoma;color:#fff;font-size:0.8rem;
+        border:1px solid #333;width:100%;text-align:center;
+        background:linear-gradient( to bottom, #555, #444 );height:26px;cursor:pointer;
+    }
+    .st_money:hover {
+
+        background:linear-gradient( to bottom, #444, #555 );
+    }
+
+    .vv_msg {
+        font-family: 'Nanum Gothic', sans-serif;
+        color:#333;font-size:12px;line-height:24px;
+    }
+    .vv_nick {
+        font-family: 'Nanum Gothic', sans-serif;
+        color:#333333;font-size:12px;line-height:24px;font-weight:bold;
+    }
+    .vv_info {
+         font-family:Tahoma;color:#808080;font-size:12px;
+    }
+    .vv_notice {
+         font-family: 'Nanum Gothic', sans-serif;font-weight:bold;height:28px;line-height:28px;
+         color:#000000;font-size:12px;
+    }
+    .vv_alert {
+         font-family:Tahoma;color:#f35632;font-size:12px;
+    }
+    .v_short0 {
+         font-family:Tahoma;color:#fa7661;
+    }
+    .v_short {
+         font-family:Tahoma;color:#c44d2d;
+    }
+    .v_short_order {
+         font-family:Tahoma;color:#ff4628;font-size:0.9rem;background:linear-gradient( to bottom, #555, #444 );padding-left:10px;height:28px;cursor:pointer;
+    }
+    .v_short_order:hover
+     {
+        color:#4fff08;
+    }
+
+    .v_long_order {
+         font-family:Tahoma;color:#6da0fd;font-size:0.9rem;background:linear-gradient( to bottom, #555, #444 );padding-right:10px;height:28px;cursor:pointer;
+    }
+    .v_long_order:hover
+     {
+        color:#4fff08;
+    }
+
+    .v_long {
+         font-family:Tahoma;color:#317aff;
+    }
+    .v_long0 {
+         font-family:Tahoma;color:#6da0fd;
+    }
+
+
+
+
+    .btn_buy {
+         font-family:Tahoma;color:#fff;background:linear-gradient( to bottom, #318ce7, #166ec5 );border:1px solid #111;font-size:1rem;cursor:pointer;
+    }
+    .btn_buy:hover {
+         background:linear-gradient( to bottom, #005aff, #6da0fd );
+    }
+    .btn_sell {
+         font-family:Tahoma;color:#fff;background:linear-gradient( to bottom, #89443a, #5d2820 );border:1px solid #111;font-size:1rem;cursor:pointer;
+    }
+    .btn_sell:hover {
+         background:linear-gradient( to bottom, #ff4122, #fe6f58 );
+    }
+
+    .btn_stop {
+         font-family:Tahoma;color:#fff;background:linear-gradient( to bottom, #999, #555 );border:1px solid #111;font-size:0.9rem;height:45px;width:100%;cursor:pointer;
+    }
+    .btn_stop:hover {
+         background:linear-gradient( to bottom, #ff0000, #ff4628 );
+    }
+
+    .v_orders_sell {
+        font-family:Tahoma;color:#fff;
+        font-size:0.8rem;
+        background:linear-gradient( to bottom, #fe6f58, #ff4122 );
+     
+        height:28px;
+        
+    }
+
+
+    .v_orders_sell_btn {
+        font-family:Tahoma;color:#fff;
+        font-size:0.8rem;
+        background:linear-gradient( to bottom, #fe6f58, #ff4122 );
+     
+        height:28px;
+        cursor:pointer;
+        
+    }
+
+    .v_orders_sell_btn:hover {
+        color:#4fff08;
+        
+    }
+
+    .v_orders_buy {
+        font-family:Tahoma;color:#fff;
+        font-size:0.8rem;
+        background:linear-gradient( to bottom, #6da0fd, #005aff );
+       
+        height:28px;
+       cursor:pointer;
+    }
+    .v_orders_buy_btn {
+        font-family:Tahoma;color:#fff;
+        font-size:0.8rem;
+        background:linear-gradient( to bottom, #6da0fd, #005aff );
+       
+        height:28px;
+       
+    }
+
+    .v_orders_buy_btn:hover {
+        color:#4fff08;
+        
+    }
+
+
+    .v_short_order_btn {
+     
+        font-size:0.8rem;
+        font-family:Tahoma;color:#eee;font-size:0.9rem;height:26px;cursor:pointer;
+     
+        height:28px;
+        border-bottom:1px solid #253440;
+        
+    }
+
+    .v_long_order_btn {
+     
+        font-size:0.8rem;
+         font-family:Tahoma;color:#6da0fd;font-size:0.9rem;height:26px;cursor:pointer;
+        
+        border-bottom:1px solid #253440;
+        height:28px;
+       
+    }
+
+ 
+
+   .v_none {
+         font-family:Tahoma;color:#eee;font-size:0.9rem;border-bottom:1px solid #3d211c;padding-right:5px;padding-left:5px;
+    }
+   .v_none1 {
+         font-family:Tahoma;color:#aaa;font-size:0.9rem;border-bottom:1px solid #3d211c;padding-right:5px;padding-left:5px;
+    }
+
+
+
+
+
+    .btn_input_half {
+        font-family:Tahoma;color:#fff;background:#333;width:60px;height:30px;text-align:center;border:1px solid #111;
+        font-size:0.9rem;line-height:24px;
+    }
+
+
+
+    .btn_input {
+        font-family:Tahoma;color:#fff;background:#333;width:100%;height:40px;text-align:center;border:1px solid #111;
+        font-size:1rem;line-height:30px;
+    }
+    .scroll_buy {
+        scrollbar-highlight-color: #FFFFFF;
+        scrollbar-3dlight-color: #B58E63;
+        scrollbar-face-color: #F2ECE6;
+        scrollbar-shadow-color: #B58E63;
+        scrollbar-darkshadow-color: white;
+        scrollbar-track-color: #FFFFFF;
+        scrollbar-arrow-color: #B58E63;
+    }
+
+
+    .btn_ac {
+        color:#fff;cursor:pointer;
+    }
+
+    .btn_ac:hover {
+            color:#4fff08;
+    }
+
+    .btn_ac_buy_price {
+        color:#fff;cursor:pointer;
+    }
+
+    .btn_ac_buy_price:hover {
+            color:#4fff08;
+    }
+
+   .btn_ac_cancel {
+       background:linear-gradient( to bottom, #ff2906, #ba1a00 );
+       border:1px solid #111;
+       width:100%;
+        color:#ccc;cursor:pointer;
+    }
+
+    .btn_ac_cancel:hover {
+            color:#fff;
+    }
+</style>
+
+
+
+<script language="javascript">
+
+
+    function fn_google() {
+
+        $.ajax({
+            type: "POST"
+        , async: true
+        , url: "/include/google.asp"
+        , dataType: "html"
+        , timeout: 10000
+        , cache: false
+        , contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+        , success: function (response, status, request) {
+
+            $('#vm_google').html(response);
+
+
+        }
+
+        });
+
+
+    }
+
+
+
+    function fn_show(cnt) {
+        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+        $('#tot_usd').animateNumber({ number: cnt, numberStep: comma_separator_number_step }, 10000);
+    }
+
+    function fn_show_number(target, cnt) {
+        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+        $(target).animateNumber({ number: cnt, numberStep: comma_separator_number_step }, 10000);
+    }
+
+
+
+    var view_ratio = 5;
+
+
+    var hc = 0;
+    var hq = 0;
+
+    var min_effect = 0;
+
+
+    function numberWithCommas(n) {
+        var parts = n.toString().split(".");
+        return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (parts[1] ? "." + parts[1] : "");
+    }
+
+
+
+    var timer04;
+    var timer05;
+
+    function fn_tcs(tcs) {
+  
+        view_ratio = tcs;
+        obj_ac.play();
+  
+     
+
+    }
+
+
+  
+
+    var lang = 'KR';
+    var mode = '';
+
+    function fn_set_lang(lang) {
+
+        if (lang == 1) {
+            window.open('?lang=EN&mode=', '_self');
+        } else {
+            window.open('?lang=KR&mode=', '_self');
+        }
+    }
+
+    function fn_set_mode() {
+        
+
+        if (mode == '') {
+            window.open('?lang='+lang +'&mode=2', '_self');
+        } else {
+            window.open('?lang=' + lang + '&mode=', '_self');
+        }
+    }
+
+    function fn_set_1s() {
+        if ($('#sound_effect').is(":checked")) {
+            min_effect = 0;
+
+        } else {
+            obj_tet.pause();
+            obj_coin2.pause();
+
+        }
+    }
+
+
+</script>
+
+
+</head>
+
+
+<body style="font-family:Arial;font-size:0.9rem;background:#2d3b47;padding:5px;">
+    <center>
+
+
+
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0"  style="border:2px solid #89443a;" >
+
+            <tr>
+                <td width="100%" style="padding:0px;background:#1b1f28;">
+
+
+
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              
+                                    <td align="center" width="100%" style="background:#202d37;" valign="top">
+                  
+
+
+                           <div id="main_trade"   >
+
+	                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+ 	                            <tr>
+  	                                <td valign="top" width="100%" style="">
+
+
+                                        <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="background:#253440;" >
+                                                        <tr>
+
+                                                            <td width="23%" align="center" style="color:#fff;padding:5px;">
+                                                                <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size:0.9rem;padding-top:5px;">
+                                                                    <tr>
+                                                                        <td height="20" align="center"><span style="color:#ccc;">Buy Orders</span> $ <span id="order_tot_buy" class="v_long" ></span></td>
+                                                                    </tr>
+                                                             
+                                                                    </table>
+                                                            </td>
+                                                            <td width="10%" align="right" style="color:#fff;padding:5px;font-size:1rem;" height="40">
+                                                                <span id="tot_buy_percent"></span>
+                                                                </td>                                            
+                                                            <td width="10%"></td>
+                                                            <td width="13%" align="center" style="color:#eee;padding:5px;" height="50">
+                                                             <table  border="0" cellpadding="0" cellspacing="0" width="100%" >
+                                                                 <tr>
+                                                                     <td style="border:1px solid #202d37;border-radius:4px;background:#2d3b47;" width="100%" align="center"><div id="xbt_last" style=""></div></td>
+                                                                 </tr>
+                                                                </table>
+                                                            </td>
+                                                            <td width="10%"></td>
+                                                            <td width="10%" align="left" style="color:#fff;padding:5px;font-size:1rem;" >
+                                                                <span id="tot_sell_percent"></span>
+                                                            </td>
+                                                            <td width="23%" align="center" style="color:#fff;padding:5px;font-size:0.7rem;" >
+
+                                                                <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size:0.9rem;padding-top:5px;">
+                                                                    <tr>
+                                                                        <td height="20" align="center">$ <span id="order_tot_sell" class="v_short" ></span> <span style="color:#ccc;">Sell Orders</span> </td>
+                                                                    </tr>
+                                                            
+                                                                    </table>
+                                                            </td>
+
+                                                        </tr>
+
+                                                        </table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:#202d37;">
+                                        <tr>
+                                              <td width="15%" style="padding:5px;" >
+                                                <div style=" overflow-y:hidden;overflow-x:hidden;height:280px;width:100%;word-break:break-all;padding-left:0px;font-size:0.9rem;" id="trade_long" class="scroll_buy">
+  	                                                <span id="trade_long_data" class="v_short"></span>
+                                                </div>
+                                                  
+                                              </td>
+                                            <td width="35%" height="20"  align="center" style="color:#aaa;font-size:0.8rem;" colspan="2">
+                                                
+                                                    <div id="order_bid">
+
+                                                
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+                                                            <td id='bid_0_1' class='v_none1' width="33%" ></td>
+                                                            <td id='bid_0_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
+                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                                <div id='bid_0_3' style="position:absolute;z-index:10;padding-left:7%">
+                                                                </div>
+                                                                  <div class="w3-blue" >
+                                                                    <div class="w3-white" style="height:20px;width:0%" id="bid_0_4"></div>
+                                                                  </div>
+                                                            </td>
+                                                      
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+                                                            <td id='bid_1_1' class='v_none1' width="33%" ></td>
+                                                            <td id='bid_1_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
+                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                                <div id='bid_1_3' style="position:absolute;z-index:10;padding-left:7%">
+                                                                </div>
+                                                                  <div class="w3-blue" >
+                                                                    <div class="w3-white" style="height:20px;width:0%" id="bid_1_4"></div>
+                                                                  </div>
+                                                            </td>
+                                                      
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+                                                            <td id='bid_2_1' class='v_none1' width="33%" ></td>
+                                                            <td id='bid_2_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
+                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                                <div id='bid_2_3' style="position:absolute;z-index:10;padding-left:7%">
+                                                                </div>
+                                                                  <div class="w3-blue" >
+                                                                    <div class="w3-white" style="height:20px;width:0%" id="bid_2_4"></div>
+                                                                  </div>
+                                                            </td>
+                                                      
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+                                                            <td id='bid_3_1' class='v_none1' width="33%" ></td>
+                                                            <td id='bid_3_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
+                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                                <div id='bid_3_3' style="position:absolute;z-index:10;padding-left:7%">
+                                                                </div>
+                                                                  <div class="w3-blue" >
+                                                                    <div class="w3-white" style="height:20px;width:0%" id="bid_3_4"></div>
+                                                                  </div>
+                                                            </td>
+                                                      
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+                                                            <td id='bid_4_1' class='v_none1' width="33%" ></td>
+                                                            <td id='bid_4_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
+                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                                <div id='bid_4_3' style="position:absolute;z-index:10;padding-left:7%">
+                                                                </div>
+                                                                  <div class="w3-blue" >
+                                                                    <div class="w3-white" style="height:20px;width:0%" id="bid_4_4"></div>
+                                                                  </div>
+                                                            </td>
+                                                      
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+                                                            <td id='bid_5_1' class='v_none1' width="33%" ></td>
+                                                            <td id='bid_5_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
+                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                                <div id='bid_5_3' style="position:absolute;z-index:10;padding-left:7%">
+                                                                </div>
+                                                                  <div class="w3-blue" >
+                                                                    <div class="w3-white" style="height:20px;width:0%" id="bid_5_4"></div>
+                                                                  </div>
+                                                            </td>
+                                                      
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+                                                            <td id='bid_6_1' class='v_none1' width="33%" ></td>
+                                                            <td id='bid_6_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
+                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                                <div id='bid_6_3' style="position:absolute;z-index:10;padding-left:7%">
+                                                                </div>
+                                                                  <div class="w3-blue" >
+                                                                    <div class="w3-white" style="height:20px;width:0%" id="bid_6_4"></div>
+                                                                  </div>
+                                                            </td>
+                                                      
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+                                                            <td id='bid_7_1' class='v_none1' width="33%" ></td>
+                                                            <td id='bid_7_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
+                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                                <div id='bid_7_3' style="position:absolute;z-index:10;padding-left:7%">
+                                                                </div>
+                                                                  <div class="w3-blue" >
+                                                                    <div class="w3-white" style="height:20px;width:0%" id="bid_7_4"></div>
+                                                                  </div>
+                                                            </td>
+                                                      
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+                                                            <td id='bid_8_1' class='v_none1' width="33%" ></td>
+                                                            <td id='bid_8_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
+                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                                <div id='bid_8_3' style="position:absolute;z-index:10;padding-left:7%">
+                                                                </div>
+                                                                  <div class="w3-blue" >
+                                                                    <div class="w3-white" style="height:20px;width:0%" id="bid_8_4"></div>
+                                                                  </div>
+                                                            </td>
+                                                      
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+                                                            <td id='bid_9_1' class='v_none1' width="33%" ></td>
+                                                            <td id='bid_9_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
+                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                                <div id='bid_9_3' style="position:absolute;z-index:10;padding-left:7%">
+                                                                </div>
+                                                                  <div class="w3-blue" >
+                                                                    <div class="w3-white" style="height:20px;width:0%" id="bid_9_4"></div>
+                                                                  </div>
+                                                            </td>
+                                                      
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+
+
+                                                    </div>
+                                            </td>
+                                              
+                                            <td width="35%"  align="center" style="color:#aaa;font-size:0.8rem;border-left:1px solid #111;" colspan="2">
+                                                <div id="order_ask">
+
+                                                
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+
+                                                            <td class='v_short_order_btn' style="text-align:center" width="33%"  >
+
+                                                                <div id='ask_0_3' style="position:absolute;z-index:10;padding-left:20px;"></div>
+                                                                  <div class="w3-white" id="result_bar11">
+                                                                    <div class="w3-red" style="height:20px;width:0%" id="ask_0_4"></div>
+                                                                  </div>
+
+
+                                                            </td>
+                                                            <td id='ask_0_2' class='v_none' width="33%" style="padding-left:20px;"  ></td>    
+                                                            <td id='ask_0_1' class='v_none1' width="33%" align="right" ></td>
+                                                                                                              
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+
+                                                            <td class='v_short_order_btn' style="text-align:center" width="33%"  >
+
+                                                                <div id='ask_1_3' style="position:absolute;z-index:10;padding-left:20px;"></div>
+                                                                  <div class="w3-white" id="result_bar11">
+                                                                    <div class="w3-red" style="height:20px;width:0%" id="ask_1_4"></div>
+                                                                  </div>
+
+
+                                                            </td>
+                                                            <td id='ask_1_2' class='v_none' width="33%" style="padding-left:20px;"  ></td>    
+                                                            <td id='ask_1_1' class='v_none1' width="33%" align="right" ></td>
+                                                                                                              
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+
+                                                            <td class='v_short_order_btn' style="text-align:center" width="33%"  >
+
+                                                                <div id='ask_2_3' style="position:absolute;z-index:10;padding-left:20px;"></div>
+                                                                  <div class="w3-white" id="result_bar11">
+                                                                    <div class="w3-red" style="height:20px;width:0%" id="ask_2_4"></div>
+                                                                  </div>
+
+
+                                                            </td>
+                                                            <td id='ask_2_2' class='v_none' width="33%" style="padding-left:20px;"  ></td>    
+                                                            <td id='ask_2_1' class='v_none1' width="33%" align="right" ></td>
+                                                                                                              
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+
+                                                            <td class='v_short_order_btn' style="text-align:center" width="33%"  >
+
+                                                                <div id='ask_3_3' style="position:absolute;z-index:10;padding-left:20px;"></div>
+                                                                  <div class="w3-white" id="result_bar11">
+                                                                    <div class="w3-red" style="height:20px;width:0%" id="ask_3_4"></div>
+                                                                  </div>
+
+
+                                                            </td>
+                                                            <td id='ask_3_2' class='v_none' width="33%" style="padding-left:20px;"  ></td>    
+                                                            <td id='ask_3_1' class='v_none1' width="33%" align="right" ></td>
+                                                                                                              
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+
+                                                            <td class='v_short_order_btn' style="text-align:center" width="33%"  >
+
+                                                                <div id='ask_4_3' style="position:absolute;z-index:10;padding-left:20px;"></div>
+                                                                  <div class="w3-white" id="result_bar11">
+                                                                    <div class="w3-red" style="height:20px;width:0%" id="ask_4_4"></div>
+                                                                  </div>
+
+
+                                                            </td>
+                                                            <td id='ask_4_2' class='v_none' width="33%" style="padding-left:20px;"  ></td>    
+                                                            <td id='ask_4_1' class='v_none1' width="33%" align="right" ></td>
+                                                                                                              
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+
+                                                            <td class='v_short_order_btn' style="text-align:center" width="33%"  >
+
+                                                                <div id='ask_5_3' style="position:absolute;z-index:10;padding-left:20px;"></div>
+                                                                  <div class="w3-white" id="result_bar11">
+                                                                    <div class="w3-red" style="height:20px;width:0%" id="ask_5_4"></div>
+                                                                  </div>
+
+
+                                                            </td>
+                                                            <td id='ask_5_2' class='v_none' width="33%" style="padding-left:20px;"  ></td>    
+                                                            <td id='ask_5_1' class='v_none1' width="33%" align="right" ></td>
+                                                                                                              
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+
+                                                            <td class='v_short_order_btn' style="text-align:center" width="33%"  >
+
+                                                                <div id='ask_6_3' style="position:absolute;z-index:10;padding-left:20px;"></div>
+                                                                  <div class="w3-white" id="result_bar11">
+                                                                    <div class="w3-red" style="height:20px;width:0%" id="ask_6_4"></div>
+                                                                  </div>
+
+
+                                                            </td>
+                                                            <td id='ask_6_2' class='v_none' width="33%" style="padding-left:20px;"  ></td>    
+                                                            <td id='ask_6_1' class='v_none1' width="33%" align="right" ></td>
+                                                                                                              
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+
+                                                            <td class='v_short_order_btn' style="text-align:center" width="33%"  >
+
+                                                                <div id='ask_7_3' style="position:absolute;z-index:10;padding-left:20px;"></div>
+                                                                  <div class="w3-white" id="result_bar11">
+                                                                    <div class="w3-red" style="height:20px;width:0%" id="ask_7_4"></div>
+                                                                  </div>
+
+
+                                                            </td>
+                                                            <td id='ask_7_2' class='v_none' width="33%" style="padding-left:20px;"  ></td>    
+                                                            <td id='ask_7_1' class='v_none1' width="33%" align="right" ></td>
+                                                                                                              
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+
+                                                            <td class='v_short_order_btn' style="text-align:center" width="33%"  >
+
+                                                                <div id='ask_8_3' style="position:absolute;z-index:10;padding-left:20px;"></div>
+                                                                  <div class="w3-white" id="result_bar11">
+                                                                    <div class="w3-red" style="height:20px;width:0%" id="ask_8_4"></div>
+                                                                  </div>
+
+
+                                                            </td>
+                                                            <td id='ask_8_2' class='v_none' width="33%" style="padding-left:20px;"  ></td>    
+                                                            <td id='ask_8_1' class='v_none1' width="33%" align="right" ></td>
+                                                                                                              
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+                                              
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                  
+                                                        <tr>
+
+                                                            <td class='v_short_order_btn' style="text-align:center" width="33%"  >
+
+                                                                <div id='ask_9_3' style="position:absolute;z-index:10;padding-left:20px;"></div>
+                                                                  <div class="w3-white" id="result_bar11">
+                                                                    <div class="w3-red" style="height:20px;width:0%" id="ask_9_4"></div>
+                                                                  </div>
+
+
+                                                            </td>
+                                                            <td id='ask_9_2' class='v_none' width="33%" style="padding-left:20px;"  ></td>    
+                                                            <td id='ask_9_1' class='v_none1' width="33%" align="right" ></td>
+                                                                                                              
+                                                        </tr>
+                                                                                  
+                                                    </table>
+                                                
+                                                    
+
+                                                </div>
+                                            </td>
+                                              <td width="15%" style="padding:5px;">
+                                                <div style="text-align:right;overflow-y:hidden;overflow-x:hidden;height:280px;width:100%;word-break:break-all;padding-right:5px;font-size:0.9rem;" id="trade_short">
+  	                                                <span id="trade_short_data" class="v_long">
+
+
+
+
+  	                                                </span>
+                                                </div>
+                                              </td>
+
+
+                                        </tr>
+
+                                    </table>
+
+                          
+
+                           
+
+
+                                    </td>
+                                 </tr>
+
+                            </table>
+                       
+
+
+                            </div>
+
+
+
+
+                                    </td>
+
+
+
+                                </tr>
+                            </table>
+              
+	                 
+
+
+
+                </td>
+            </tr>
+
+
+    </table>                     
+
+
+</center>
+<div style="display:none" id="vm_google">
+
+</div>
+<div style="display:none" id="debug"></div>
+    </body>
+    </!html>
+
+
+
+
+
+<script type="text/javascript">
+
+    var g_wws = 0;
+
+
+    var wws = {};
+
+    var overtime = 300;
+
+
+
+    var g_loop = 30;
+
+    function fn_loop() {
+	if (g_license != 0) {
+        if (g_member != 0) {
+            g_loop += 1;
+  
+            if (g_loop >= 60) {
+
+                g_loop = 0;
+
+                $('#my_menu').css('color', '#4fff08');
+
+
+
+                setTimeout("fn_loop_signal();", 100);
+
+            }
+        }
+	}
+    }
+
+    function fn_loop_signal() {
+        $('#my_menu').css('color', '#fff');
+
+    }
+
+
+    //====================================================================================================
+    var g_access_retry = 0;
+
+    var show_license = 0;
+
+
+    //====================================================================================================
+
+
+    function fn_connect_api() {
+
+        try {
+
+            wws = new WebSocket("wss://www.bitmex.com/realtime?subscribe=trade:XBTUSD");
+
+            wws.onopen = function () {
+                $('#vm_access_msg').html('Connected Public Api. please login to api');
+                wws.send('{"op":"subscribe","args":["orderBook10:XBTUSD"]}');
+
+                if (g_wallet == 1) {
+                    fn_access();
+                }
+            }
+
+            wws.onmessage = function (e) {
+                fn_rs(e.data);
+            }
+            wws.onclose = function (e) {
+                fn_msg_disconnect("disconnected");
+
+            }
+            wws.onerror = function (e) {
+                onError(e);
+            }
+
+
+
+        } catch (exception) {
+            alert('Error : ' + exception);
+
+        }
+    }
+
+
+
+
+    function onError(evt) {
+        
+    }
+
+    function fn_msg_disconnect(e) {
+      
+        setTimeout("fn_connect_api()",5000);
+    }
+
+
+
+    function fn_reconnect() {
+        $('#btn_connect').hide();
+        window.open('?', '_self');
+    }
+
+    //====================================================================================================
+
+    $("#send_q").bind("keypress", function (event) {
+        if (event.which == 13) {
+            fn_msg_rq();
+        }
+    });
+
+
+
+    var api_ex_date = new Date().getTime();
+
+    var api_key = "";
+    var api_sec = "";
+
+    var api_signature = "";
+    var verb = 'GET';
+
+
+
+    var path = '/api/v1/instrument';
+    var api_data = '';
+
+    var img = '';
+    var chatlog_buy = [];
+    var chatlog_sell = [];
+    var msg_count = 0;
+    var is_scroll_lock = false;
+
+
+    var on_tb = 0;
+    var on_ts = 0;
+
+    function fn_return_long() {
+
+        $("#title_long").toggle();
+        $('#trade_long').css('background', '#202d37');
+        on_tb = 0;
+    }
+    function fn_return_short() {
+
+        $("#title_short").toggle();
+        $('#trade_short').css('background', '#202d37');
+        on_ts = 0;
+    }
+
+
+
+
+
+
+    function fn_return_buy_lamp() {
+        for (var i = 0; i <= 9; i++) {
+            $('#bid_' + i + '_1').css('background', '#202d37');
+        }
+
+    }
+
+
+    function fn_return_sell_lamp() {
+        for (var i = 0; i <= 9; i++) {
+            $('#ask_' + i + '_1').css('background', '#202d37');
+        }
+
+
+    }
+
+
+
+
+
+</script>
+
+
+
+<script type="text/javascript">
+
+    var g_license = 0;
+
+    var g_wallet = 0;
+    var g_position = 0;
+
+    var g_member = 0;
+    var g_balance = 0;
+    var g_pending = 0;
+
+    var g_buy_price = 0;
+    var g_sell_price = 0;
+
+    var g_xbt = '';
+    var g_xbt_real = 0;
+    var g_position_size = 0;
+    var g_position_price = 0;
+    var g_liquidationPrice = 0;
+    var g_position_market_price = 0;
+    var g_position_btc = 0;
+    var g_marginAvailableMargin = 0;
+
+    var g_marginLeverage = 0;
+    var g_leverage = 0;
+    var g_marginBalance = 0;
+
+    var g_unrealisedPnl = 0;
+    var g_unrealisedPnlPcnt = 0;
+
+    var g_order_buy = [];
+    var g_order_sell = [];
+
+    var long_count = 0;
+    var short_count = 0;
+
+    var ng_short = 0;
+    var ng_long = 0;
+    var ng_short_size = 0;
+    var ng_long_size = 0;
+
+    var on_bgm = 0;
+
+    var b4_persent = 0;
+
+
+    var g_5m_buy = 0;
+    var g_5m_sell = 0;
+    var g_5m_tot = 0;
+
+    var g_5m_cnt_buy = 0;
+    var g_5m_cnt_sell = 0;
+    var signal_cnt = 0;
+
+
+    var signal_ai = 0;
+    var signal_ai_data = 0;
+    var signal_xbt = 0;
+
+    var signal_on_xbt = 0;
+    var signal_on_status = 0;
+
+    var on_gxbt = '';
+
+    var on_alert_xbt = 0;
+
+    var sound_size_buy_now = 0;
+    var sound_size_sell_now = 0;
+
+    var sound_size_sell = 100000;
+
+    function fn_rs(txt) {
+
+        g_wws = 0;
+
+        var objs = JSON.parse(txt);
+
+       
+        var msg;
+
+
+
+      
+
+        if (objs.table == 'trade') {
+       
+         
+            $(objs["data"]).each(function (i, member) {
+                
+
+                if (objs["data"][i].side == 'Sell') {
+
+                    var price = objs["data"][i].price;
+
+                    if (ng_short != price) {
+                        ng_short_size = objs["data"][i].size;
+                        ng_short = price;
+                    } else {
+                        ng_short_size += objs["data"][i].size;
+                    }
+
+                    sound_size_sell_now += parseInt(objs["data"][i].size);
+
+
+                    g_xbt = '<span class="v_short"  style="font-size:1.8rem;" >' + parseFloat(objs["data"][i].price).toFixed(1) + '</span>';
+                    g_xbt_real = objs["data"][i].price;
+
+          
+                    msg = '<span class="v_short0">  $ ' + numberWithCommas(objs["data"][i].size) + '</span> <br>';
+
+
+                    
+                    short_count++;
+           
+
+                    if (short_count > 20) {
+
+                        short_count = 1;
+          
+
+                        $("#trade_short_data").html(msg);
+  
+
+                    }else{
+                        $("#trade_short_data").prepend(msg);
+                    }
+
+    
+                } else {
+                    g_xbt = '<span class="v_long"  style="font-size:1.8rem;" >' + parseFloat(objs["data"][i].price).toFixed(1) + '</span>';
+
+                    g_xbt_real = objs["data"][i].price;
+                    var price = objs["data"][i].price;
+
+                    if (ng_long != price) {
+                        ng_long_size = objs["data"][i].size;
+                        ng_long = price;
+                    } else {
+                        ng_long_size += objs["data"][i].size;
+                    }
+
+                    sound_size_buy_now += parseInt(objs["data"][i].size);
+
+
+
+                    var msg = '';
+                    msg = '<span class="v_long0">  $ ' + numberWithCommas(objs["data"][i].size) + "</span><br>";
+
+
+                
+                    long_count++;
+           
+                    if (long_count > 20) {
+
+                        long_count = 1;
+         
+
+                        $("#trade_long_data").html(msg);
+     
+
+                    }else{
+
+                        $("#trade_long_data").prepend(msg);
+                    }
+       
+
+                }
+
+                $('#xbt_last').html(g_xbt);
+
+            });
+
+
+
+
+            var del_vol = 0;
+
+
+            if (sound_size_sell_now >= (sound_size_sell * 10)) {
+
+                del_vol = sound_size_sell * 10;
+
+                $('#ask_0_1').css('background', '#c44d2d');
+                $('#ask_1_1').css('background', '#c44d2d');
+                $('#ask_2_1').css('background', '#c44d2d');
+                $('#ask_3_1').css('background', '#c44d2d');
+                $('#ask_4_1').css('background', '#c44d2d');
+                $('#ask_5_1').css('background', '#c44d2d');
+                $('#ask_6_1').css('background', '#c44d2d');
+                $('#ask_7_1').css('background', '#c44d2d');
+                $('#ask_8_1').css('background', '#c44d2d');
+                $('#ask_9_1').css('background', '#c44d2d');
+
+                var xx = setTimeout(fn_return_sell_lamp, 100);
+
+            } else if (sound_size_sell_now >= (sound_size_sell * 9)) {
+
+
+                del_vol = sound_size_sell * 9;
+
+                $('#ask_1_1').css('background', '#c44d2d');
+                $('#ask_2_1').css('background', '#c44d2d');
+                $('#ask_3_1').css('background', '#c44d2d');
+                $('#ask_4_1').css('background', '#c44d2d');
+                $('#ask_5_1').css('background', '#c44d2d');
+                $('#ask_6_1').css('background', '#c44d2d');
+                $('#ask_7_1').css('background', '#c44d2d');
+                $('#ask_8_1').css('background', '#c44d2d');
+                $('#ask_9_1').css('background', '#c44d2d');
+
+                var xx = setTimeout(fn_return_sell_lamp, 100);
+            } else if (sound_size_sell_now >= (sound_size_sell * 8)) {
+
+         
+                del_vol = sound_size_sell * 8;
+
+                $('#ask_2_1').css('background', '#c44d2d');
+                $('#ask_3_1').css('background', '#c44d2d');
+                $('#ask_4_1').css('background', '#c44d2d');
+                $('#ask_5_1').css('background', '#c44d2d');
+                $('#ask_6_1').css('background', '#c44d2d');
+                $('#ask_7_1').css('background', '#c44d2d');
+                $('#ask_8_1').css('background', '#c44d2d');
+                $('#ask_9_1').css('background', '#c44d2d');
+
+
+                var xx = setTimeout(fn_return_sell_lamp, 100);
+            } else if (sound_size_sell_now >= (sound_size_sell * 7)) {
+
+      
+                del_vol = sound_size_sell * 7;
+
+                $('#ask_3_1').css('background', '#c44d2d');
+                $('#ask_4_1').css('background', '#c44d2d');
+                $('#ask_5_1').css('background', '#c44d2d');
+                $('#ask_6_1').css('background', '#c44d2d');
+                $('#ask_7_1').css('background', '#c44d2d');
+                $('#ask_8_1').css('background', '#c44d2d');
+                $('#ask_9_1').css('background', '#c44d2d');
+
+
+                var xx = setTimeout(fn_return_sell_lamp, 100);
+            } else if (sound_size_sell_now >= (sound_size_sell * 6)) {
+
+      
+                del_vol = sound_size_sell * 6;
+
+                $('#ask_4_1').css('background', '#c44d2d');
+                $('#ask_5_1').css('background', '#c44d2d');
+                $('#ask_6_1').css('background', '#c44d2d');
+                $('#ask_7_1').css('background', '#c44d2d');
+                $('#ask_8_1').css('background', '#c44d2d');
+                $('#ask_9_1').css('background', '#c44d2d');
+
+
+
+                var xx = setTimeout(fn_return_sell_lamp, 100);
+            } else if (sound_size_sell_now >= (sound_size_sell * 5)) {
+
+      
+                del_vol = sound_size_sell * 5;
+
+                $('#ask_5_1').css('background', '#c44d2d');
+                $('#ask_6_1').css('background', '#c44d2d');
+                $('#ask_7_1').css('background', '#c44d2d');
+                $('#ask_8_1').css('background', '#c44d2d');
+                $('#ask_9_1').css('background', '#c44d2d');
+
+
+                var xx = setTimeout(fn_return_sell_lamp, 100);
+            } else if (sound_size_sell_now >= (sound_size_sell * 4)) {
+
+          
+                del_vol = sound_size_sell * 4;
+
+                $('#ask_6_1').css('background', '#c44d2d');
+                $('#ask_7_1').css('background', '#c44d2d');
+                $('#ask_8_1').css('background', '#c44d2d');
+                $('#ask_9_1').css('background', '#c44d2d');
+
+
+
+                var xx = setTimeout(fn_return_sell_lamp, 100);
+
+            } else if (sound_size_sell_now >= (sound_size_sell * 3)) {
+
+         
+                del_vol = sound_size_sell * 3;
+
+                $('#ask_7_1').css('background', '#c44d2d');
+                $('#ask_8_1').css('background', '#c44d2d');
+                $('#ask_9_1').css('background', '#c44d2d');
+
+                var xx = setTimeout(fn_return_sell_lamp, 100);
+
+            } else if (sound_size_sell_now >= (sound_size_sell * 2)) {
+
+      
+                del_vol = sound_size_sell * 2;
+
+
+                $('#ask_8_1').css('background', '#c44d2d');
+                $('#ask_9_1').css('background', '#c44d2d');
+                var xx = setTimeout(fn_return_sell_lamp, 100);
+
+            } else if (sound_size_sell_now >= sound_size_sell) {
+                del_vol = sound_size_sell * 1;
+
+                $('#ask_9_1').css('background', '#c44d2d');
+                var xx = setTimeout(fn_return_sell_lamp, 100);
+            }
+
+
+
+
+            if (sound_size_sell_now >= sound_size_sell) {
+
+
+
+                sound_size_sell_now = sound_size_sell_now - del_vol;
+
+
+      
+
+            }
+
+
+
+
+            if (sound_size_buy_now >= (sound_size_sell * 10)) {
+
+             
+                del_vol = sound_size_sell * 10;
+
+                $('#bid_0_1').css('background', '#0089a1');
+                $('#bid_1_1').css('background', '#0089a1');
+                $('#bid_2_1').css('background', '#0089a1');
+                $('#bid_3_1').css('background', '#0089a1');
+                $('#bid_4_1').css('background', '#0089a1');
+                $('#bid_5_1').css('background', '#0089a1');
+                $('#bid_6_1').css('background', '#0089a1');
+                $('#bid_7_1').css('background', '#0089a1');
+                $('#bid_8_1').css('background', '#0089a1');
+                $('#bid_9_1').css('background', '#0089a1');
+
+                var xx = setTimeout(fn_return_buy_lamp, 100);
+
+            } else if (sound_size_buy_now >= (sound_size_sell * 9)) {
+
+                del_vol = sound_size_sell * 9;
+
+                $('#bid_1_1').css('background', '#0089a1');
+                $('#bid_2_1').css('background', '#0089a1');
+                $('#bid_3_1').css('background', '#0089a1');
+                $('#bid_4_1').css('background', '#0089a1');
+                $('#bid_5_1').css('background', '#0089a1');
+                $('#bid_6_1').css('background', '#0089a1');
+                $('#bid_7_1').css('background', '#0089a1');
+                $('#bid_8_1').css('background', '#0089a1');
+                $('#bid_9_1').css('background', '#0089a1');
+
+                var xx = setTimeout(fn_return_buy_lamp, 100);
+
+
+            } else if (sound_size_buy_now >= (sound_size_sell * 8)) {
+
+            
+                del_vol = sound_size_sell * 8;
+
+                $('#bid_2_1').css('background', '#0089a1');
+                $('#bid_3_1').css('background', '#0089a1');
+                $('#bid_4_1').css('background', '#0089a1');
+                $('#bid_5_1').css('background', '#0089a1');
+                $('#bid_6_1').css('background', '#0089a1');
+                $('#bid_7_1').css('background', '#0089a1');
+                $('#bid_8_1').css('background', '#0089a1');
+                $('#bid_9_1').css('background', '#0089a1');
+
+                var xx = setTimeout(fn_return_buy_lamp, 100);
+
+            } else if (sound_size_buy_now >= (sound_size_sell * 7)) {
+
+                del_vol = sound_size_sell * 7;
+
+                $('#bid_3_1').css('background', '#0089a1');
+                $('#bid_4_1').css('background', '#0089a1');
+                $('#bid_5_1').css('background', '#0089a1');
+                $('#bid_6_1').css('background', '#0089a1');
+                $('#bid_7_1').css('background', '#0089a1');
+                $('#bid_8_1').css('background', '#0089a1');
+                $('#bid_9_1').css('background', '#0089a1');
+
+                var xx = setTimeout(fn_return_buy_lamp, 100);
+            } else if (sound_size_buy_now >= (sound_size_sell * 6)) {
+
+  
+                del_vol = sound_size_sell * 6;
+
+
+                $('#bid_4_1').css('background', '#0089a1');
+                $('#bid_5_1').css('background', '#0089a1');
+                $('#bid_6_1').css('background', '#0089a1');
+                $('#bid_7_1').css('background', '#0089a1');
+                $('#bid_8_1').css('background', '#0089a1');
+                $('#bid_9_1').css('background', '#0089a1');
+
+                var xx = setTimeout(fn_return_buy_lamp, 100);
+            } else if (sound_size_buy_now >= (sound_size_sell * 5)) {
+
+   
+                del_vol = sound_size_sell * 5;
+
+                $('#bid_5_1').css('background', '#0089a1');
+                $('#bid_6_1').css('background', '#0089a1');
+                $('#bid_7_1').css('background', '#0089a1');
+                $('#bid_8_1').css('background', '#0089a1');
+                $('#bid_9_1').css('background', '#0089a1');
+
+                var xx = setTimeout(fn_return_buy_lamp, 100);
+
+            } else if (sound_size_buy_now >= (sound_size_sell * 4)) {
+
+  
+                del_vol = sound_size_sell * 4;
+
+                $('#bid_6_1').css('background', '#0089a1');
+                $('#bid_7_1').css('background', '#0089a1');
+                $('#bid_8_1').css('background', '#0089a1');
+                $('#bid_9_1').css('background', '#0089a1');
+
+                var xx = setTimeout(fn_return_buy_lamp, 100);
+            } else if (sound_size_buy_now >= (sound_size_sell * 3)) {
+
+                del_vol = sound_size_sell * 3;
+
+
+                $('#bid_7_1').css('background', '#0089a1');
+                $('#bid_8_1').css('background', '#0089a1');
+                $('#bid_9_1').css('background', '#0089a1');
+
+                var xx = setTimeout(fn_return_buy_lamp, 100);
+
+            } else if (sound_size_buy_now >= (sound_size_sell * 2)) {
+
+            
+                del_vol = sound_size_sell * 2;
+
+                $('#bid_8_1').css('background', '#0089a1');
+                $('#bid_9_1').css('background', '#0089a1');
+                var xx = setTimeout(fn_return_buy_lamp, 100);
+
+            } else if (sound_size_buy_now >= sound_size_sell) {
+
+                del_vol = sound_size_sell;
+
+                $('#bid_9_1').css('background', '#0089a1');
+                var xx = setTimeout(fn_return_buy_lamp, 100);
+            }
+
+
+
+            if (sound_size_buy_now >= sound_size_sell) {
+
+                sound_size_buy_now = sound_size_buy_now - del_vol;
+
+    
+
+            }
+
+
+
+
+        } else if (objs.table == 'orderBook10') {
+            var shorts = '';
+            var longs = '';
+
+            var buy_price = 0;
+            var sell_price = 0;
+
+            var tot_buy = 0;
+            var tot_sell = 0;
+
+            var fir_vol1 = 0;
+            var fir_vol2 = 0;
+
+            var check_my = 0;
+
+            var tt_buy = 0;
+            var tt_sell = 0;
+            $(objs["data"][0].bids).each(function (i, member) {
+                tt_buy = parseFloat(tt_buy) + parseFloat(objs["data"][0].bids[i][1]);
+                tt_sell = parseFloat(tt_sell) + parseFloat(objs["data"][0].asks[i][1]);
+
+            }
+            );
+
+
+            $(objs["data"][0].bids).each(function (i, member) {
+                tot_buy += objs["data"][0].bids[i][1];
+                if (i == 0) {
+                    buy_price = objs["data"][0].bids[i][0];
+                    fir_vol1 = objs["data"][0].bids[i][1];
+
+                    g_buy_price = buy_price;
+                }
+
+                check_my = 0;
+
+                for (var x = 0; x < g_order_buy.length; x++) {
+                    order = g_order_buy[x];
+
+                    if (parseFloat(order.order_price) == parseFloat(objs["data"][0].bids[i][0])) {
+                        check_my = 1;
+                    }
+                }
+
+                $('#bid_' + i + '_1').html(numberWithCommas(tot_buy));
+
+ 
+                    $('#bid_' + i + '_2').html(numberWithCommas(objs["data"][0].bids[i][1]));
+         
+
+                var now_my_offer = 0;
+                now_my_offer = $('#btn_buy_post_price').val();
+
+
+                    $('#bid_' + i + '_3').html(numberWithCommas(numberWithCommas(parseFloat(objs["data"][0].bids[i][0]).toFixed(1))));
+             
+
+                var av = parseFloat(tot_buy / tt_buy * 100);
+
+                av = 100 - av;
+
+
+                $('#bid_' + i + '_4').css('width', av + '%');
+            });
+
+
+
+
+
+
+            if ($('#btn_buy_post_price_check').is(":checked")) {
+
+                if ($('#btn_buy_post_price_check').is(":checked")) {
+                    var sp = $('#btn_buy_post_price_sp').val();
+                    sp = sp.trim();
+                    if (sp == '') {
+                        sp = 0;
+                    }
+                    buy_price = parseFloat(buy_price) - parseFloat(sp);
+
+                }
+
+                $('#btn_buy_post_price').val(buy_price);
+            }
+
+
+
+
+
+            $(objs["data"][0].asks).each(function (i, member) {
+                tot_sell += objs["data"][0].asks[i][1];
+                if (i == 0) {
+                    sell_price = objs["data"][0].asks[i][0];
+                    fir_vol2 = objs["data"][0].asks[i][1];
+
+                    g_sell_price = sell_price;
+
+                }
+
+                check_my = 0;
+
+                for (var x = 0; x < g_order_sell.length; x++) {
+                    order = g_order_sell[x];
+
+                    if (parseFloat(order.order_price) == parseFloat(objs["data"][0].asks[i][0])) {
+                        check_my = 1;
+                    }
+                }
+
+
+
+                $('#ask_' + i + '_1').html(numberWithCommas(tot_sell));
+
+       
+                    $('#ask_' + i + '_2').html(numberWithCommas(objs["data"][0].asks[i][1]));
+         
+                var now_my_offer_sell = 0;
+                now_my_offer_sell = $('#btn_sell_post_price').val();
+
+         
+                    $('#ask_' + i + '_3').html(numberWithCommas(parseFloat(objs["data"][0].asks[i][0]).toFixed(1)));
+            
+
+                var av = parseFloat(tot_sell / tt_sell * 100);
+
+
+
+                $('#ask_' + i + '_4').css('width', av + '%');
+
+            });
+
+
+            if ($('#sound_effect').is(":checked")) {
+
+
+                if (on_alert_xbt != sell_price) {
+                    on_alert_xbt = sell_price;
+                
+
+                }
+            }
+
+
+
+
+
+            if ($('#btn_sell_post_price_check').is(":checked")) {
+
+                if ($('#btn_sell_post_price_check').is(":checked")) {
+                    var sp = $('#btn_sell_post_price_sp').val();
+                    sp = sp.trim();
+                    if (sp == '') {
+                        sp = 0;
+                    }
+                    sell_price = parseFloat(sell_price) + parseFloat(sp);
+
+                }
+
+
+
+                $('#btn_sell_post_price').val(sell_price);
+            }
+
+
+            //$('#order_ask').html(shorts);
+            //$('#order_bid').html(longs);
+
+
+            $('#order_tot_buy').html(numberWithCommas(tot_buy));
+            $('#order_tot_sell').html(numberWithCommas(tot_sell));
+
+            var tot = 0;
+            tot = parseFloat(tot_sell) + parseFloat(tot_buy);
+
+            var av1 = parseFloat(tot_buy / tot * 100);
+            var av2 = parseFloat(tot_sell / tot * 100);
+
+
+            if (av1 > av2) {
+                $('#tot_buy_percent').html('<span style="color:#4fff08">' + parseFloat(av1).toFixed(2) + ' %</span>');
+                if (b4_persent != 1) {
+
+                    b4_persent = 1;
+                }
+            } else {
+                $('#tot_buy_percent').html(parseFloat(av1).toFixed(2) + ' %');
+            }
+
+            if (av1 < av2) {
+                $('#tot_sell_percent').html('<span style="color:#4fff08">' + parseFloat(av2).toFixed(2) + ' %</span>');
+                if (b4_persent != 2) {
+
+                    b4_persent = 2;
+                }
+            } else {
+                $('#tot_sell_percent').html(parseFloat(av2).toFixed(2) + ' %');
+            }
+
+
+        }
+
+
+       
+
+
+    }
+
+    var order_lev = 0;
+
+
+    function fn_order_lev(lev) {
+
+        $('#order_leverage').val(lev);
+
+        $('#order_leverage').css('background', '#65fd36');
+        $('#order_leverage').css('color', '#000');
+        order_lev = lev;
+
+    }
+
+    function fn_order_lev_done() {
+        $('#order_leverage').css('background', '#333');
+        $('#order_leverage').css('color', '#fff');
+    }
+
+    function fn_order_lev_num(lev) {
+        order_lev = lev.trim();
+
+        if (order_lev >= 100) {
+            order_lev = 100;
+        }
+        if (order_lev <= 0) {
+            order_lev = 0;
+        }
+
+
+        $('#order_lev').val(order_lev);
+        
+    }
+
+</script>
+
+
+
+<script language="javascript">
+
+
+
+
+
+    $(document).ready(function () {
+
+        fn_connect_api();
+
+
+
+
+        fn_google();
+
+
+
+
+
+ 
+    });
+
+
+
+
+
+
+
+</script>
+
