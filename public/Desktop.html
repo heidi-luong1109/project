@@ -9,6 +9,19 @@
 <script type="text/javascript" src="https://static.cryptowat.ch/assets/scripts/embed.bundle.js"></script>
 <link rel="stylesheet" href="css/proBar.css">
 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
 
 <!--div id='chartdiv'></div> -->
 <script type="text/javascript">
@@ -50,9 +63,9 @@ body {font-size:10pt; margin:0; padding:0;}
     }
 
     .st_money {
-        font-family:Tahoma;color:#fff;font-size:0.8rem;
+        font-family:Tahoma;color:#fff;font-size:0.7rem;
         border:1px solid #333;width:100%;text-align:center;
-        background:linear-gradient( to bottom, #555, #444 );height:26px;cursor:pointer;
+        background:linear-gradient( to bottom, #555, #444 );height:32px;cursor:pointer;
     }
     .st_money:hover {
 
@@ -78,52 +91,74 @@ body {font-size:10pt; margin:0; padding:0;}
          font-family:Tahoma;color:#f35632;font-size:12px;
     }
     .v_short0 {
-         font-family:Tahoma;color:#E24B4B;
+         font-family:Tahoma;color:#fa7661;font-size:0.7rem;
     }
     .v_short {
-         font-family:Tahoma;color:#E24B4B;
-    }
-    .v_short_order {
-         font-family:Tahoma;color:#E24B4B;font-size:0.9rem;background:linear-gradient( to bottom, #555, #444 );padding-left:10px;height:28px;cursor:pointer;
-    }
-    .v_short_order:hover
-     {
-        color:#E24B4B;
+         font-family:Tahoma;color:#ff4628;font-size:0.7rem;
     }
 
-    .v_long_order {
-         font-family:Tahoma;color:##ffffff;font-size:0.9rem;background:linear-gradient( to bottom, #555, #444 );padding-right:10px;height:28px;cursor:pointer;
+
+
+    .v_short_order_btn {
+        height:26px;
+        font-size:0.8rem;
+        font-family:Tahoma;color:#ffffff;font-size:0.8rem;cursor:pointer;
+        border-bottom:1px solid #3d211c;
+
     }
     .v_long_order:hover
      {
         color:#52C66C;
     }
 
+
+    .v_long_order_btn {
+        height:26px;
+        font-size:0.8rem;
+        font-family:Tahoma;color:#ffffff;font-size:0.8rem;cursor:pointer;
+        border-bottom:1px solid #3d211c;
+
+    }
+
+    .v_long_order_btn:hover {
+        color:#52C66C;
+    }
+
+
+
     .v_long {
-         font-family:Tahoma;color:#43AA5A;
+         font-family:Tahoma;color:#43AA5A;font-size:0.7rem;
     }
     .v_long0 {
-         font-family:Tahoma;color:#43AA5A;
+         font-family:Tahoma;color:#43AA5A;font-size:0.7rem;
+    }
+
+
+   .v_none {
+         font-family:Tahoma;color:#eee;font-size:0.7rem;border-bottom:1px solid #3d211c;padding-right:5px;padding-left:5px;height:26px;
+    }
+   .v_none1 {
+         font-family:Tahoma;color:#aaa;font-size:0.7rem;border-bottom:1px solid #3d211c;padding-right:5px;padding-left:5px;height:26px;
     }
 
 
 
 
     .btn_buy {
-         font-family:Tahoma;color:#fff;background:linear-gradient( to bottom, #318ce7, #166ec5 );border:1px solid #111;font-size:1rem;cursor:pointer;
+         font-family:Tahoma;color:#fff;background:linear-gradient( to bottom, #43AA5A, #43AA5A );border:1px solid #111;font-size:0.8rem;cursor:pointer;
     }
     .btn_buy:hover {
-         background:linear-gradient( to bottom, #005aff, #43AA5A );
+         background:linear-gradient( to bottom, #43AA5A, #43AA5A );
     }
     .btn_sell {
-         font-family:Tahoma;color:#fff;background:linear-gradient( to bottom, #89443a, #5d2820 );border:1px solid #111;font-size:1rem;cursor:pointer;
+         font-family:Tahoma;color:#fff;background:linear-gradient( to bottom, #fe6f58, #ff4122 );border:1px solid #111;font-size:0.8rem;cursor:pointer;
     }
     .btn_sell:hover {
-         background:linear-gradient( to bottom, #E24B4B, #E24B4B );
+         background:linear-gradient( to bottom, #ff4122, #fe6f58 );
     }
 
     .btn_stop {
-         font-family:Tahoma;color:#fff;background:linear-gradient( to bottom, #999, #555 );border:1px solid #111;font-size:0.9rem;height:45px;width:100%;cursor:pointer;
+         font-family:Tahoma;color:#fff;background:linear-gradient( to bottom, #999, #555 );border:1px solid #111;font-size:0.8rem;height:45px;width:100%;cursor:pointer;
     }
     .btn_stop:hover {
          background:linear-gradient( to bottom, #ff0000, #ff4628 );
@@ -131,8 +166,8 @@ body {font-size:10pt; margin:0; padding:0;}
 
     .v_orders_sell {
         font-family:Tahoma;color:#fff;
-        font-size:0.8rem;
-        background:linear-gradient( to bottom, #E24B4B, #E24B4B );
+        font-size:0.7rem;
+        background:linear-gradient( to bottom, #fe6f58, #ff4122 );
 
         height:28px;
 
@@ -141,8 +176,8 @@ body {font-size:10pt; margin:0; padding:0;}
 
     .v_orders_sell_btn {
         font-family:Tahoma;color:#fff;
-        font-size:0.8rem;
-        background:linear-gradient( to bottom, #E24B4B, #E24B4B );
+        font-size:0.7rem;
+        background:linear-gradient( to bottom, #fe6f58, #ff4122 );
 
         height:28px;
         cursor:pointer;
@@ -150,22 +185,22 @@ body {font-size:10pt; margin:0; padding:0;}
     }
 
     .v_orders_sell_btn:hover {
-        color:#E24B4B;
+        color:#52C66C;
 
     }
 
     .v_orders_buy {
         font-family:Tahoma;color:#fff;
-        font-size:0.8rem;
-        background:linear-gradient( to bottom, #43AA5A, #005aff );
+        font-size:0.7rem;
+        background:linear-gradient( to bottom, #43AA5A, #43AA5A );
 
         height:28px;
        cursor:pointer;
     }
     .v_orders_buy_btn {
         font-family:Tahoma;color:#fff;
-        font-size:0.8rem;
-        background:linear-gradient( to bottom, #43AA5A, #005aff );
+        font-size:0.7rem;
+        background:linear-gradient( to bottom, #43AA5A, #43AA5A );
 
         height:28px;
 
@@ -183,7 +218,7 @@ body {font-size:10pt; margin:0; padding:0;}
         font-family:Tahoma;color:#eee;font-size:0.9rem;height:26px;cursor:pointer;
 
         height:28px;
-        border-bottom:1px solid #253440;
+        border-bottom:1px solid #131722;
 
     }
 
@@ -192,7 +227,7 @@ body {font-size:10pt; margin:0; padding:0;}
         font-size:0.8rem;
          font-family:Tahoma;color:#ffffff;font-size:0.9rem;height:26px;cursor:pointer;
 
-        border-bottom:1px solid #253440;
+        border-bottom:1px solid #131722;
         height:28px;
 
     }
@@ -211,15 +246,15 @@ body {font-size:10pt; margin:0; padding:0;}
 
 
     .btn_input_half {
-        font-family:Tahoma;color:#fff;background:#333;width:60px;height:30px;text-align:center;border:1px solid #111;
-        font-size:0.9rem;line-height:24px;
+        font-family:Tahoma;color:#fff;background:#333;width:40px;height:24px;text-align:center;border:1px solid #111;
+        font-size:0.8rem;line-height:24px;
     }
 
 
 
     .btn_input {
         font-family:Tahoma;color:#fff;background:#333;width:100%;height:40px;text-align:center;border:1px solid #111;
-        font-size:1rem;line-height:30px;
+        font-size:1rem;line-height:50px;
     }
     .scroll_buy {
         scrollbar-highlight-color: #FFFFFF;
@@ -249,10 +284,11 @@ body {font-size:10pt; margin:0; padding:0;}
     }
 
    .btn_ac_cancel {
-       background:linear-gradient( to bottom, #ff2906, #ba1a00 );
+       background:linear-gradient( to bottom, #ccc, #555 );
        border:1px solid #111;
-       width:100%;
         color:#ccc;cursor:pointer;
+        width:100%;
+        height:30px;
     }
 
     .btn_ac_cancel:hover {
@@ -351,50 +387,72 @@ body {font-size:10pt; margin:0; padding:0;}
 
 </head>
 
-
-<body style="font-family:Arial;font-size:0.9rem;background:#2d3b47;padding:5px;">
-
-    <center>
-
-        <div style="overflow-x:auto;">
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-                <td>
-                    
 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-<div class="tradingview-widget-container">
 
 
-  <script type="text/javascript">
-      new TradingView.widget(
-      {
-          "width": 1100,
-          "height": 500,
-          "symbol": "BITMEX:XBTUSD",
-          "interval": "60",
-          "timezone": "Etc/UTC",
-          "theme": "Dark",
-          "style": "1",
-          "locale": "en",
-          "toolbar_bg": "#333",
-          "enable_publishing": false,
-          "hide_legend": true,
-          "save_image": false,
-"hide_side_toolbar": false,
-          "studies": [
-              "BB@tv-basicstudies"
-          ],
-          "watchlist": [
-              "BITMEX:XBT",
-              "BITMEX:ETHUSD"
-            ],
-          "container_id": "tradingview_5e52b"
-      }
-      );
-  </script>
-</div>
-</table>
-</div>
+<script type="text/javascript">
+    'use strict'
+    let widget = {
+        "autosize": true,
+        "interval": "60",
+        "timezone": "America/New_York",
+        "theme": "Dark",
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "withdateranges": true,
+        "hide_side_toolbar": false,
+        "allow_symbol_change": true,
+        "studies": [
+            "BB@tv-basicstudies"
+        ],
+        "watchlist": [
+            "BITMEX:XBT",
+            "BITMEX:ETHUSD"
+        ]
+    }
+
+    class TradingViewWidget extends TradingView.widget {
+        constructor(symbol="BITMEX:XBTUSD"){
+            widget.symbol = symbol
+            super(widget)
+        }
+    }
+</script>
+
+<link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+
+    <div class="flex-grid">
+        <div class="item">
+            <script>
+                const BTCUSDT = new TradingViewWidget("BINANCE:BTCUSDTPERP")
+            </script>
+        </div>
+
+        <div class="item">
+            <script>
+                const ETHUSDT = new TradingViewWidget("BINANCE:ETHUSDTPERP")
+            </script>
+        </div>
+    </div>
+
+
+    <div class="flex-grid">
+        <div class="item">
+            <script>
+                const BTC = new TradingViewWidget("BITMEX:XBTUSD")
+            </script>
+        </div>
+    </div>
+
+
+
+
+
+
+<body style="font-family:Arial;font-size:0.9rem;background:#131722;padding:5px;">
+
           
     <table width="100%" border="0" cellspacing="0" cellpadding="0"  style="border:2px solid #89443a;" >
 
@@ -405,58 +463,64 @@ body {font-size:10pt; margin:0; padding:0;}
 
                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
 
-                                    <td align="center" width="100%" style="background:#202d37;" valign="top">
+                                    <td align="center" width="100%" style="background:#131722;" valign="top">
 
 
+<table  border="0" cellpadding="0" cellspacing="0" width="69%">
+                                          <tr>
 
-                           <div id="main_trade"   >
-
-	                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
- 	                            <tr>
-  	                                <td valign="top" width="100%" style="">
+                                            <td width="100%" align="center" valign="top" bgcolor="#111" colspan="6">
 
 
-                                        <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="background:#253440;" >
+                                                    <table  border="0" cellpadding="0" cellspacing="0" width="100%" >
+                                                     
                                                         <tr>
-
-                                                            <td width="23%" align="center" style="color:#fff;padding:5px;">
-                                                                <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size:0.9rem;padding-top:5px;">
-                                                                    <tr>
-                                                                        <td height="20" align="center"><span style="color:#ccc;">Buy Orders</span> $ <span id="order_tot_buy" class="v_long" ></span></td>
-                                                                    </tr>
-
-                                                                    </table>
-                                                            </td>
-                                                            <td width="10%" align="right" style="color:#fff;padding:5px;font-size:1rem;" height="40">
+                                                            <td width="15%" align="left" style="color:#fff;padding:5px;font-size:0.8rem;" height="50" >
                                                                 <span id="tot_buy_percent"></span>
                                                                 </td>
-                                                            <td width="10%"></td>
-                                                            <td width="13%" align="center" style="color:#eee;padding:5px;" height="50">
-                                                             <table  border="0" cellpadding="0" cellspacing="0" width="100%" >
-                                                                 <tr>
-                                                                     <td style="border:1px solid #202d37;border-radius:4px;background:#2d3b47;" width="100%" align="center"><div id="xbt_last" style=""></div></td>
-                                                                 </tr>
-                                                                </table>
-                                                            </td>
-                                                            <td width="10%"></td>
-                                                            <td width="10%" align="left" style="color:#fff;padding:5px;font-size:1rem;" >
-                                                                <span id="tot_sell_percent"></span>
-                                                            </td>
-                                                            <td width="23%" align="center" style="color:#fff;padding:5px;font-size:0.7rem;" >
-
-                                                                <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size:0.9rem;padding-top:5px;">
+                                                            <td width="20%" align="center" style="color:#fff;padding:5px;" height="50">
+                                                                <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size:0.7rem;padding-top:5px;">
                                                                     <tr>
-                                                                        <td height="20" align="center">$ <span id="order_tot_sell" class="v_short" ></span> <span style="color:#ccc;">Sell Orders</span> </td>
+                                                                        <td height="20" align="center"><span style="color:#ccc;">Buy Orders</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="20" class="v_long"  align="center">$ <span id="order_tot_buy"></span></td>
                                                                     </tr>
 
                                                                     </table>
                                                             </td>
 
+                                                            <td width="30%" align="center" style="color:#fff;padding:5px;font-size:1rem;" height="50">
+
+                                                                <div id="xbt_last" style=""></div>
+                                                            </td>
+                                                            <td width="20%" align="center" style="color:#fff;padding:5px;font-size:0.7rem;" height="50">
+
+                                                                <table  border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size:0.7rem;padding-top:5px;">
+                                                              
+                                                                    <tr>
+                                                                        <td height="20" align="center"><span style="color:#ccc;">Sell Orders</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="20" class="v_short" align="center">$ <span id="order_tot_sell"></span></td>
+                                                                    </tr>
+                                                                    </table>
+                                                            </td>
+                                                            <td width="15%" align="right" style="color:#fff;padding:5px;font-size:0.8rem;" height="50">
+                                                                <span id="tot_sell_percent"></span>
+                                                            </td>
                                                         </tr>
 
                                                         </table>
 
-<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:#202d37;">
+
+
+                                              </td>
+                                            </tr>
+
+                                                        </table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:#131722;">
                                         <tr>
                                               <td width="15%" style="padding:5px;" >
                                                 <div style=" overflow-y:hidden;overflow-x:hidden;height:280px;width:100%;word-break:break-all;padding-left:0px;font-size:0.9rem;" id="trade_long" class="scroll_buy">
@@ -475,7 +539,7 @@ body {font-size:10pt; margin:0; padding:0;}
                                                         <tr>
                                                             <td id='bid_0_1' class='v_none1' width="33%" ></td>
                                                             <td id='bid_0_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
-                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                            <td  class='v_long_order_btn' style="background:#131722;" width="33%"  >
                                                                 <div id='bid_0_3' style="position:absolute;z-index:10;padding-left:7%">
                                                                 </div>
                                                                   <div class="w3-blue" >
@@ -494,7 +558,7 @@ body {font-size:10pt; margin:0; padding:0;}
                                                         <tr>
                                                             <td id='bid_1_1' class='v_none1' width="33%" ></td>
                                                             <td id='bid_1_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
-                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                            <td  class='v_long_order_btn' style="background:#131722;" width="33%"  >
                                                                 <div id='bid_1_3' style="position:absolute;z-index:10;padding-left:7%">
                                                                 </div>
                                                                   <div class="w3-blue" >
@@ -513,7 +577,7 @@ body {font-size:10pt; margin:0; padding:0;}
                                                         <tr>
                                                             <td id='bid_2_1' class='v_none1' width="33%" ></td>
                                                             <td id='bid_2_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
-                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                            <td  class='v_long_order_btn' style="background:#131722;" width="33%"  >
                                                                 <div id='bid_2_3' style="position:absolute;z-index:10;padding-left:7%">
                                                                 </div>
                                                                   <div class="w3-blue" >
@@ -532,7 +596,7 @@ body {font-size:10pt; margin:0; padding:0;}
                                                         <tr>
                                                             <td id='bid_3_1' class='v_none1' width="33%" ></td>
                                                             <td id='bid_3_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
-                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                            <td  class='v_long_order_btn' style="background:#131722;" width="33%"  >
                                                                 <div id='bid_3_3' style="position:absolute;z-index:10;padding-left:7%">
                                                                 </div>
                                                                   <div class="w3-blue" >
@@ -551,7 +615,7 @@ body {font-size:10pt; margin:0; padding:0;}
                                                         <tr>
                                                             <td id='bid_4_1' class='v_none1' width="33%" ></td>
                                                             <td id='bid_4_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
-                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                            <td  class='v_long_order_btn' style="background:#131722;" width="33%"  >
                                                                 <div id='bid_4_3' style="position:absolute;z-index:10;padding-left:7%">
                                                                 </div>
                                                                   <div class="w3-blue" >
@@ -570,7 +634,7 @@ body {font-size:10pt; margin:0; padding:0;}
                                                         <tr>
                                                             <td id='bid_5_1' class='v_none1' width="33%" ></td>
                                                             <td id='bid_5_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
-                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                            <td  class='v_long_order_btn' style="background:#131722;" width="33%"  >
                                                                 <div id='bid_5_3' style="position:absolute;z-index:10;padding-left:7%">
                                                                 </div>
                                                                   <div class="w3-blue" >
@@ -589,7 +653,7 @@ body {font-size:10pt; margin:0; padding:0;}
                                                         <tr>
                                                             <td id='bid_6_1' class='v_none1' width="33%" ></td>
                                                             <td id='bid_6_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
-                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                            <td  class='v_long_order_btn' style="background:#131722;" width="33%"  >
                                                                 <div id='bid_6_3' style="position:absolute;z-index:10;padding-left:7%">
                                                                 </div>
                                                                   <div class="w3-blue" >
@@ -608,7 +672,7 @@ body {font-size:10pt; margin:0; padding:0;}
                                                         <tr>
                                                             <td id='bid_7_1' class='v_none1' width="33%" ></td>
                                                             <td id='bid_7_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
-                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                            <td  class='v_long_order_btn' style="background:#131722;" width="33%"  >
                                                                 <div id='bid_7_3' style="position:absolute;z-index:10;padding-left:7%">
                                                                 </div>
                                                                   <div class="w3-blue" >
@@ -627,7 +691,7 @@ body {font-size:10pt; margin:0; padding:0;}
                                                         <tr>
                                                             <td id='bid_8_1' class='v_none1' width="33%" ></td>
                                                             <td id='bid_8_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
-                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                            <td  class='v_long_order_btn' style="background:#131722;" width="33%"  >
                                                                 <div id='bid_8_3' style="position:absolute;z-index:10;padding-left:7%">
                                                                 </div>
                                                                   <div class="w3-blue" >
@@ -646,7 +710,7 @@ body {font-size:10pt; margin:0; padding:0;}
                                                         <tr>
                                                             <td id='bid_9_1' class='v_none1' width="33%" ></td>
                                                             <td id='bid_9_2' class='v_none' width="33%" align="right" style="padding-right:20px;"  ></td>
-                                                            <td  class='v_long_order_btn' style="background:#202d37;" width="33%"  >
+                                                            <td  class='v_long_order_btn' style="background:#131722;" width="33%"  >
                                                                 <div id='bid_9_3' style="position:absolute;z-index:10;padding-left:7%">
                                                                 </div>
                                                                   <div class="w3-blue" >
@@ -938,9 +1002,15 @@ body {font-size:10pt; margin:0; padding:0;}
                 </td>
             </tr>
 
-
+            <select name="eml" onchange="javascript:handleSelect(this)"style="height:25px;width:100%;background:#131722;color:#fff;border:none;text-align:center;font-size:0.7rem;">
+                <option value="Desktop">Desktop</option>
+                <option value="Bitmex-XBTUSD">XBTUSD</option>
+                <option value="Bitmex-ETHUSD">ETHUSD</option>
+                <option value="chart">2xChart</option>
+                </select>
+        
+            
     </table>
-
 
 </center>
 
@@ -1039,7 +1109,7 @@ body {font-size:10pt; margin:0; padding:0;}
 
 
     function onError(evt) {
-
+        $('#order_msg').html('<span style="color: red;">ERROR Bimex V2 API </span> <br> Please wait a while ' + evt.Data);
     }
 
     function fn_msg_disconnect(e) {
@@ -1090,13 +1160,13 @@ body {font-size:10pt; margin:0; padding:0;}
     function fn_return_long() {
 
         $("#title_long").toggle();
-        $('#trade_long').css('background', '#202d37');
+        $('#trade_long').css('background', '#131722');
         on_tb = 0;
     }
     function fn_return_short() {
 
         $("#title_short").toggle();
-        $('#trade_short').css('background', '#202d37');
+        $('#trade_short').css('background', '#131722');
         on_ts = 0;
     }
 
@@ -1107,7 +1177,7 @@ body {font-size:10pt; margin:0; padding:0;}
 
     function fn_return_buy_lamp() {
         for (var i = 0; i <= 9; i++) {
-            $('#bid_' + i + '_1').css('background', '#202d37');
+            $('#bid_' + i + '_1').css('background', '#131722');
         }
 
     }
@@ -1115,7 +1185,7 @@ body {font-size:10pt; margin:0; padding:0;}
 
     function fn_return_sell_lamp() {
         for (var i = 0; i <= 9; i++) {
-            $('#ask_' + i + '_1').css('background', '#202d37');
+            $('#ask_' + i + '_1').css('background', '#131722');
         }
 
 
@@ -1244,7 +1314,7 @@ body {font-size:10pt; margin:0; padding:0;}
                     short_count++;
 
 
-                    if (short_count > 20) {
+                    if (short_count > 200) {
 
                         short_count = 1;
 
@@ -1281,7 +1351,7 @@ body {font-size:10pt; margin:0; padding:0;}
 
                     long_count++;
 
-                    if (long_count > 20) {
+                    if (long_count > 200) {
 
                         long_count = 1;
 
