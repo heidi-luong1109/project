@@ -21,7 +21,7 @@ var options = {
 var server = https.createServer(options, app);
 
 server.listen(port, function(){
-    console.log("Server started at http://localhost:%s", port);
+    console.log("Server started at https://localhost:%s", port);
 });
 
 
