@@ -1,0 +1,392 @@
+<html>
+<head>
+<title>bitmex ethusd</title>
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/probar_m.css">
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+1
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<style>canvas{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}body{font-family:'Arial'}.btn_act{font-size:.8rem;width:120px;height:100%;border:1px solid #000;background:linear-gradient(to bottom,#efefef,#999);color:#000}.btn_chart{font-size:.8rem;height:30px;border:1px solid #000;background:#efefef;color:#000;width:80px}.btn_chart2{font-size:.8rem;height:30px;border:1px solid #000;background:#13c600;color:#fff;width:80px}.t1{border-right:1px solid #000}.t2{border-right:1px solid #000;padding-right:5px;text-align:right}.c1{color:#f00;border-right:1px solid #000;padding-right:5px;text-align:right}.c2{color:#009619;border-right:1px solid #000;padding-right:5px;text-align:right}.c3{color:#000;border-right:1px solid #000;padding-right:5px;text-align:right}@import url(https://fonts.googleapis.com/css?family=Oxygen+Mono);#cssmenu{padding:0;margin:0;border:0;width:auto}#cssmenu ul,#cssmenu li{list-style:none;margin:0;padding:0}#cssmenu ul{position:relative;z-index:597}#cssmenu ul li{float:left;min-height:1px;vertical-align:middle}#cssmenu ul li.hover,#cssmenu ul li:hover{position:relative;z-index:599;cursor:default}#cssmenu ul ul{visibility:hidden;position:absolute;top:100%;left:0;z-index:598;width:100%}#cssmenu ul ul li{float:none}#cssmenu ul ul ul{top:0;left:190px;width:190px}#cssmenu ul li:hover>ul{visibility:visible}#cssmenu ul ul{bottom:0;left:0}#cssmenu ul ul{margin-top:0}#cssmenu ul ul li{font-weight:normal}#cssmenu a{display:block;line-height:1em;text-decoration:none}#cssmenu{background:#333;border-bottom:4px solid #1b9bff;font-family:'Oxygen Mono',Tahoma,Arial,sans-serif;font-size:1rem}#cssmenu>ul{*display:inline-block}#cssmenu:after,#cssmenu ul:after{content:'';display:block;clear:both}#cssmenu ul{text-transform:uppercase}#cssmenu ul ul{border-top:4px solid #1b9bff;text-transform:none;min-width:190px}#cssmenu ul ul a{background:#1b9bff;color:#fff;border:1px solid #0082e7;border-top:0 none;line-height:150%;padding:16px 20px;font-size:12px}#cssmenu ul ul ul{border-top:0 none}#cssmenu ul ul li{position:relative}#cssmenu ul ul li:first-child>a{border-top:1px solid #0082e7}#cssmenu ul ul li:hover>a{background:#4eb1ff;color:#fff}#cssmenu ul ul li:last-child>a{-moz-border-radius:0 0 3px 3px;-webkit-border-radius:0 0 3px 3px;border-radius:0 0 3px 3px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;-moz-box-shadow:0 1px 0 #1b9bff;-webkit-box-shadow:0 1px 0 #1b9bff;box-shadow:0 1px 0 #1b9bff}#cssmenu ul ul li:last-child:hover>a{-moz-border-radius:0 0 0 3px;-webkit-border-radius:0 0 0 3px;border-radius:0 0 0 3px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box}#cssmenu ul ul li.has-sub>a:after{content:'+';position:absolute;top:50%;right:15px;margin-top:-8px}#cssmenu ul li:hover>a,#cssmenu ul li.active>a{background:#1b9bff;color:#fff}#cssmenu ul li.has-sub>a:after{content:'+';margin-left:5px}#cssmenu ul li.last ul{left:auto;right:0}#cssmenu ul li.last ul ul{left:auto;right:99.5%}#cssmenu a{background:#333;color:#cbcbcb;padding:0 20px}#cssmenu>ul>li>a{line-height:48px;font-size:12px}#cssmenu.align-center>ul{text-align:center;font-size:0}#cssmenu.align-center>ul>li{display:inline-block;float:none}#cssmenu.align-center ul ul{text-align:left}#cssmenu.align-right>ul>li{float:right}#cssmenu.align-right ul ul{left:auto;right:0;text-align:right}#cssmenu.align-right ul ul ul{left:auto;right:190px}#cssmenu.align-right ul ul li.has-sub>a:after{left:15px;right:auto}</style>
+<style type="text/css">.sidenav{height:100%;width:0;position:fixed;z-index:100;top:150px;left:0;background-color:#111;overflow-x:hidden;transition:.5s;padding-top:20px}.sidenav a{padding:8px 8px 8px 32px;text-decoration:none;font-size:1.6rem;color:#818181;display:block;transition:.3s}.sidenav a:hover{color:#f1f1f1}.sidenav .closebtn{position:absolute;top:0;right:25px;font-size:40px;margin-left:50px}@media screen and (max-height:400px){.sidenav{padding-top:15px}.sidenav a{font-size:1.8rem}}#fixed-menu{width:100%;background-color:#fff;position:fixed;top:0;left:0;z-index:99999}#main-content{width:100%;margin-top:152px}.sidenav_cart{height:100%;width:0;position:fixed;z-index:100;top:150px;right:0;background-color:#111;overflow-x:hidden;transition:.5s;padding-top:20px}.sidenav_cart a{padding:8px 8px 8px 32px;text-decoration:none;font-size:1.6rem;color:#818181;display:block;transition:.3s}.sidenav_cart a:hover{color:#f1f1f1}.sidenav_cart .closebtn{position:absolute;top:0;right:25px;font-size:40px;margin-left:50px}@media screen and (max-height:400px){.sidenav_cart{padding-top:15px}.sidenav_cart a{font-size:1.8rem}}body{font-size:.8rem;margin:0;padding:0}.chat_btn{-webkit-appearance:none;display:inline-block;height:20px;width:40px;padding:0;background-color:#fff;font-size:11px;color:#333;line-height:20px;border-radius:2px;vertical-align:middle;border:1px solid #dedede;background-color:#fff}.chat_input{-webkit-appearance:none;display:inline-block;height:31px;width:333px;padding:0 10px 0;border:1px solid #d6d6d6;background-color:#fff;font-size:11px;color:#333;line-height:31px;border-radius:3px;vertical-align:middle}.st_money{font-family:Tahoma;color:#fff;font-size:.7rem;border:1px solid #333;width:100%;text-align:center;background:linear-gradient(to bottom,#555,#444);height:32px;cursor:pointer}.st_money:hover{background:linear-gradient(to bottom,#444,#555)}.vv_msg{font-family:'Nanum Gothic',sans-serif;color:#333;font-size:12px;line-height:24px}.vv_nick{font-family:'Nanum Gothic',sans-serif;color:#333;font-size:12px;line-height:24px;font-weight:bold}.vv_info{font-family:Tahoma;color:#808080;font-size:12px}.vv_notice{font-family:'Nanum Gothic',sans-serif;font-weight:bold;height:28px;line-height:28px;color:#000;font-size:12px}.vv_alert{font-family:Tahoma;color:#f35632;font-size:12px}.v_short0{font-family:Tahoma;color:#fa7661;font-size:.7rem}.v_short{font-family:Tahoma;color:#ff4628;font-size:.7rem}.v_short_order_btn{height:26px;font-size:.8rem;font-family:Tahoma;color:#fff;font-size:.8rem;cursor:pointer;border-bottom:1px solid #3d211c}.v_short_order_btn:hover{color:#52c66c}.v_long_order_btn{height:26px;font-size:.8rem;font-family:Tahoma;color:#fff;font-size:.8rem;cursor:pointer;border-bottom:1px solid #3d211c}.v_long_order_btn:hover{color:#52c66c}.v_long{font-family:Tahoma;color:#43aa5a;font-size:.7rem}.v_long0{font-family:Tahoma;color:#43aa5a;font-size:.7rem}.v_none{font-family:Tahoma;color:#eee;font-size:.7rem;border-bottom:1px solid #3d211c;padding-right:5px;padding-left:5px;height:26px}.v_none1{font-family:Tahoma;color:#aaa;font-size:.7rem;border-bottom:1px solid #3d211c;padding-right:5px;padding-left:5px;height:26px}.btn_buy{font-family:Tahoma;color:#fff;background:linear-gradient(to bottom,#43AA5A,#43AA5A);border:1px solid #111;font-size:.8rem;cursor:pointer}.btn_buy:hover{background:linear-gradient(to bottom,#43AA5A,#43AA5A)}.btn_sell{font-family:Tahoma;color:#fff;background:linear-gradient(to bottom,#fe6f58,#ff4122);border:1px solid #111;font-size:.8rem;cursor:pointer}.btn_sell:hover{background:linear-gradient(to bottom,#ff4122,#fe6f58)}.btn_stop{font-family:Tahoma;color:#fff;background:linear-gradient(to bottom,#999,#555);border:1px solid #111;font-size:.8rem;height:45px;width:100%;cursor:pointer}.btn_stop:hover{background:linear-gradient(to bottom,#ff0000,#ff4628)}.v_orders_sell{font-family:Tahoma;color:#fff;font-size:.7rem;background:linear-gradient(to bottom,#fe6f58,#ff4122);height:28px}.v_orders_sell_btn{font-family:Tahoma;color:#fff;font-size:.7rem;background:linear-gradient(to bottom,#fe6f58,#ff4122);height:28px;cursor:pointer}.v_orders_sell_btn:hover{color:#52c66c}.v_orders_buy{font-family:Tahoma;color:#fff;font-size:.7rem;background:linear-gradient(to bottom,#43AA5A,#43AA5A);height:28px;cursor:pointer}.v_orders_buy_btn{font-family:Tahoma;color:#fff;font-size:.7rem;background:linear-gradient(to bottom,#43AA5A,#43AA5A);height:28px}.v_orders_buy_btn:hover{color:#52c66c}.btn_input_half{font-family:Tahoma;color:#fff;background:#333;width:40px;height:24px;text-align:center;border:1px solid #111;font-size:.8rem;line-height:24px}.btn_input{font-family:Tahoma;color:#fff;background:#333;width:100%;height:40px;text-align:center;border:1px solid #111;font-size:1rem;line-height:50px}.scroll_buy{scrollbar-highlight-color:#fff;scrollbar-3dlight-color:#b58e63;scrollbar-face-color:#f2ece6;scrollbar-shadow-color:#b58e63;scrollbar-darkshadow-color:white;scrollbar-track-color:#fff;scrollbar-arrow-color:#b58e63}.btn_ac{color:#fff;cursor:pointer}.btn_ac:hover{color:#52c66c}.btn_ac_buy_price{color:#fff;cursor:pointer}.btn_ac_buy_price:hover{color:#52c66c}.btn_ac_cancel{background:linear-gradient(to bottom,#ccc,#555);border:1px solid #111;color:#ccc;cursor:pointer;width:100%;height:30px}.btn_ac_cancel:hover{color:#fff}</style>
+<script language="javascript">/*<![CDATA[*/var am=0;var g_vol=0.3;function fn_show(b){var a=$.animateNumber.numberStepFactories.separator(",");$("#tot_usd").animateNumber({number:b,numberStep:a},10000)}function fn_show_number(c,b){var a=$.animateNumber.numberStepFactories.separator(",");$(c).animateNumber({number:b,numberStep:a},10000)}var view_ratio=5;var hc=0;var hq=0;var min_effect=0;function numberWithCommas(b){var a=b.toString().split(".");return a[0].replace(/\B(?=(\d{3})+(?!\d))/g,",")+(a[1]?"."+a[1]:"")}var timer04;var timer05;function fn_tcs(a){view_ratio=a;obj_ac.play()}function handleSelect(a){window.location=a.value+".html"}var lang="KR";var mode="2";function fn_set_lang(a){if(a==1){window.open("?lang=EN&mode=2","_self")}else{window.open("?lang=KR&mode=2","_self")}}function fn_set_mode(){if(mode==1){window.open("?lang="+lang+"&mode=2","_self")}else{window.open("?lang="+lang+"&mode=1","_self")}}function fn_set_1s(){}/*]]>*/</script>
+</head>
+<body style="font-family:Arial;font-size:0.9rem;background:#333">
+<center>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border:1px solid #333;border-collapse:collapse;font-size:.9rem">
+<tr>
+<td colspan="2" style="background:linear-gradient(to bottom,#777,#424444)">
+<style>body{margin:0}.sidenav{height:100%;width:0;position:fixed;z-index:100;top:30px;left:0;background-color:#111;overflow-x:hidden;transition:.5s;padding-top:20px}.sidenav a{padding:8px 8px 8px 32px;text-decoration:none;font-size:1.6rem;color:#818181;display:block;transition:.3s}.sidenav a:hover{color:#f1f1f1}.sidenav .closebtn{position:absolute;top:0;right:25px;font-size:40px;margin-left:50px}@media screen and (max-height:400px){.sidenav{padding-top:15px}.sidenav a{font-size:1.8rem}}#fixed-menu{width:100%;background-color:#fff;position:fixed;top:0;left:0;z-index:99999}#main-content{width:100%;margin-top:152px}.sidenav_cart{height:100%;width:0;position:fixed;z-index:200;top:30px;right:0;background-color:#111;overflow-x:hidden;transition:.5s}.sidenav_cart a{padding:8px 8px 8px 32px;text-decoration:none;font-size:1.6rem;color:#818181;display:block;transition:.3s}.sidenav_cart a:hover{color:#f1f1f1}.sidenav_cart .closebtn{position:absolute;top:0;right:25px;font-size:40px;margin-left:50px}@media screen and (max-height:400px){.sidenav_cart{padding-top:15px}.sidenav_cart a{font-size:1.8rem}}</style>
+<script>var side_view=0;var side_view2=0;function openNav(){if(side_view==0){document.getElementById("mySidenav").style.width="400px";side_view=1}else{document.getElementById("mySidenav").style.width="0px";side_view=0}}</script>
+<style>.cm_rqs{background:linear-gradient(to bottom,#efefef,#ccc);color:#000;width:100px;height:20px;text-align:center;font-size:.8rem;border-radius:5px;border:1px solid #ccc}.cm_rqs:hover{background:linear-gradient(to bottom,#1e2635,#0c1524);color:#fff}</style>
+</td>
+</tr>
+</table>
+<div id="api_bg" style="border:2px solid #111;width:400px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%" style="padding:0px">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" width="100%" style="background:linear-gradient(to bottom,#999,#555);padding:5px">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="15%" align="center" class="v_long" style="border:1px solid #333;border-radius:4px 0 0 4px;background:#333;font-size:.6rem" id="lamp_buy">
+$ <span id="vt_long"></span>
+</td>
+<td width="13%" align="center" style="border:1px solid #333;color:#fff;border-right:0;font-size:.8rem"><span id="vtp_long"></span></td>
+<td width="24%" align="center" style="border:1px solid #333">
+<select name="eml" onchange="javascript:handleSelect(this)"style="height:40px;width:100%;background:linear-gradient( to bottom, #fff, #777);color:#333;border:none;text-align:center;font-size:0.7rem;">
+<option value="Bitmex-ETHUSD">ETHUSD</option>
+<option value="Bitmex-XBTUSD">XBTUSD</option>
+<option value="chart">2xChart</option>
+<option value="Desktop">Desktop</option>
+</select>
+</td>
+<td width="13%" align="center" style="border:1px solid #333;color:#fff;border-left:0;font-size:.8rem"><span id="vtp_short"></span></td>
+<td width="15%" align="center" class="v_short" style="border:1px solid #333;border-radius:0 4px 4px 0;background:#333;font-size:.6rem" id="lamp_sell">
+$ <span id="vt_short"></span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<div id="vm_chart";">
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+<div class="tradingview-widget-container">
+<script type="text/javascript">new TradingView.widget({width:400,height:300,symbol:"BITMEX:ETHUSD",interval:"60",timezone:"Etc/UTC",theme:"Dark",style:"1",locale:"en",toolbar_bg:"#333",enable_publishing:false,hide_legend:true,save_image:false,hide_side_toolbar:false,studies:["IchimokuCloud@tv-basicstudies"],container_id:"tradingview_5e52b"});</script>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td align="center" width="100%" style="background:#333;border-left:1px solid #555;border-right:1px solid #555;background:#333">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="100%" align="center" valign="top" bgcolor="#111" colspan="6">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="15%" align="center" style="color:#fff;padding:5px;font-size:0.8rem" height="50">
+<span id="tot_buy_percent"></span>
+</td>
+<td width="20%" align="center" style="color:#fff;padding:5px" height="50">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size:0.7rem;padding-top:5px">
+<tr>
+<td height="20" align="center"><span style="color:#ccc">Buy Orders</span></td>
+</tr>
+<tr>
+<td height="20" class="v_long" align="center">$ <span id="order_tot_buy"></span></td>
+</tr>
+</table>
+</td>
+<td width="30%" align="center" style="color:#fff;padding:5px;font-size:1rem" height="50">
+<div id="xbt_last" style=""></div>
+</td>
+<td width="20%" align="center" style="color:#fff;padding:5px;font-size:0.7rem" height="50">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size:0.7rem;padding-top:5px">
+<tr>
+<td height="20" align="center"><span style="color:#ccc">Sell Orders</span></td>
+</tr>
+<tr>
+<td height="20" class="v_short" align="center">$ <span id="order_tot_sell"></span></td>
+</tr>
+</table>
+</td>
+<td width="15%" align="center" style="color:#fff;padding:5px;font-size:0.8rem" height="50">
+<span id="tot_sell_percent"></span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background:#131722">
+<tr>
+<td width="15%" style="padding:5px">
+<div style="overflow-y:hidden;overflow-x:hidden;height:280px;width:100%;word-break:break-all;padding-left:0;font-size:.9rem" id="trade_long" class="scroll_buy">
+<span id="trade_long_data" class="v_short"></span>
+</div>
+</td>
+<td width="35%" height="260" align="center" style="color:#aaa;font-size:0.8rem" colspan="2">
+<div id="order_bid">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id='bid_0_2' class='v_none' width="33%" align="right" style="padding-right:10px"></td>
+<td class='v_long_order_btn' width="34%" onclick="fn_set_buy_order_price(0)">
+<div id='bid_0_3' style="position:absolute;z-index:10;padding-left:14px;margin-top:5px"></div>
+<div class="w3-blue">
+<div class="w3-white" style="height:26px;width:0%" id="bid_0_4"></div>
+</div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id='bid_1_2' class='v_none' width="33%" align="right" style="padding-right:10px"></td>
+<td class='v_long_order_btn' width="34%" onclick="fn_set_buy_order_price(1)">
+<div id='bid_1_3' style="position:absolute;z-index:10;padding-left:14px;margin-top:5px"></div>
+<div class="w3-blue">
+<div class="w3-white" style="height:26px;width:0%" id="bid_1_4"></div>
+</div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id='bid_2_2' class='v_none' width="33%" align="right" style="padding-right:10px"></td>
+<td class='v_long_order_btn' width="34%" onclick="fn_set_buy_order_price(2)">
+<div id='bid_2_3' style="position:absolute;z-index:10;padding-left:14px;margin-top:5px"></div>
+<div class="w3-blue">
+<div class="w3-white" style="height:26px;width:0%" id="bid_2_4"></div>
+</div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id='bid_3_2' class='v_none' width="33%" align="right" style="padding-right:10px"></td>
+<td class='v_long_order_btn' width="34%" onclick="fn_set_buy_order_price(3)">
+<div id='bid_3_3' style="position:absolute;z-index:10;padding-left:14px;margin-top:5px"></div>
+<div class="w3-blue">
+<div class="w3-white" style="height:26px;width:0%" id="bid_3_4"></div>
+</div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id='bid_4_2' class='v_none' width="33%" align="right" style="padding-right:10px"></td>
+<td class='v_long_order_btn' width="34%" onclick="fn_set_buy_order_price(4)">
+<div id='bid_4_3' style="position:absolute;z-index:10;padding-left:14px;margin-top:5px"></div>
+<div class="w3-blue">
+<div class="w3-white" style="height:26px;width:0%" id="bid_4_4"></div>
+</div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id='bid_5_2' class='v_none' width="33%" align="right" style="padding-right:10px"></td>
+<td class='v_long_order_btn' width="34%" onclick="fn_set_buy_order_price(5)">
+<div id='bid_5_3' style="position:absolute;z-index:10;padding-left:14px;margin-top:5px"></div>
+<div class="w3-blue">
+<div class="w3-white" style="height:26px;width:0%" id="bid_5_4"></div>
+</div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id='bid_6_2' class='v_none' width="33%" align="right" style="padding-right:10px"></td>
+<td class='v_long_order_btn' width="34%" onclick="fn_set_buy_order_price(6)">
+<div id='bid_6_3' style="position:absolute;z-index:10;padding-left:14px;margin-top:5px"></div>
+<div class="w3-blue">
+<div class="w3-white" style="height:26px;width:0%" id="bid_6_4"></div>
+</div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id='bid_7_2' class='v_none' width="33%" align="right" style="padding-right:10px"></td>
+<td class='v_long_order_btn' width="34%" onclick="fn_set_buy_order_price(7)">
+<div id='bid_7_3' style="position:absolute;z-index:10;padding-left:14px;margin-top:5px"></div>
+<div class="w3-blue">
+<div class="w3-white" style="height:26px;width:0%" id="bid_7_4"></div>
+</div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id='bid_8_2' class='v_none' width="33%" align="right" style="padding-right:10px"></td>
+<td class='v_long_order_btn' width="34%" onclick="fn_set_buy_order_price(8)">
+<div id='bid_8_3' style="position:absolute;z-index:10;padding-left:14px;margin-top:5px"></div>
+<div class="w3-blue">
+<div class="w3-white" style="height:26px;width:0%" id="bid_8_4"></div>
+</div>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id='bid_9_2' class='v_none' width="33%" align="right" style="padding-right:10px"></td>
+<td class='v_long_order_btn' width="34%" onclick="fn_set_buy_order_price(9)">
+<div id='bid_9_3' style="position:absolute;z-index:10;padding-left:14px;margin-top:5px"></div>
+<div class="w3-blue">
+<div class="w3-white" style="height:26px;width:0%" id="bid_9_4"></div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td width="50%" align="center" style="color:#aaa;font-size:0.8rem" colspan="2">
+<div id="order_ask">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class='v_short_order_btn' style="text-align:center" width="33%" onclick="fn_set_sell_order_price(0)">
+<div id='ask_0_3' style="position:absolute;z-index:10;padding-left:10px;margin-top:5px"></div>
+<div class="w3-white">
+<div class="w3-red" style="height:26px;width:0%" id="ask_0_4"></div>
+</div>
+</td>
+<td id='ask_0_2' class='v_none' width="33%" style="padding-left:20px"></td>
+<td id='ask_0_1' class='v_none1' width="33%"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class='v_short_order_btn' style="text-align:center" width="33%" onclick="fn_set_sell_order_price(1)">
+<div id='ask_1_3' style="position:absolute;z-index:10;padding-left:10px;margin-top:5px"></div>
+<div class="w3-white">
+<div class="w3-red" style="height:26px;width:0%" id="ask_1_4"></div>
+</div>
+</td>
+<td id='ask_1_2' class='v_none' width="33%" style="padding-left:20px"></td>
+<td id='ask_1_1' class='v_none1' width="33%"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class='v_short_order_btn' style="text-align:center" width="33%" onclick="fn_set_sell_order_price(2)">
+<div id='ask_2_3' style="position:absolute;z-index:10;padding-left:10px;margin-top:5px"></div>
+<div class="w3-white">
+<div class="w3-red" style="height:26px;width:0%" id="ask_2_4"></div>
+</div>
+</td>
+<td id='ask_2_2' class='v_none' width="33%" style="padding-left:20px"></td>
+<td id='ask_2_1' class='v_none1' width="33%"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class='v_short_order_btn' style="text-align:center" width="33%" onclick="fn_set_sell_order_price(3)">
+<div id='ask_3_3' style="position:absolute;z-index:10;padding-left:10px;margin-top:5px"></div>
+<div class="w3-white">
+<div class="w3-red" style="height:26px;width:0%" id="ask_3_4"></div>
+</div>
+</td>
+<td id='ask_3_2' class='v_none' width="33%" style="padding-left:20px"></td>
+<td id='ask_3_1' class='v_none1' width="33%"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class='v_short_order_btn' style="text-align:center" width="33%" onclick="fn_set_sell_order_price(4)">
+<div id='ask_4_3' style="position:absolute;z-index:10;padding-left:10px;margin-top:5px"></div>
+<div class="w3-white">
+<div class="w3-red" style="height:26px;width:0%" id="ask_4_4"></div>
+</div>
+</td>
+<td id='ask_4_2' class='v_none' width="33%" style="padding-left:20px"></td>
+<td id='ask_4_1' class='v_none1' width="33%"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class='v_short_order_btn' style="text-align:center" width="33%" onclick="fn_set_sell_order_price(5)">
+<div id='ask_5_3' style="position:absolute;z-index:10;padding-left:10px;margin-top:5px"></div>
+<div class="w3-white">
+<div class="w3-red" style="height:26px;width:0%" id="ask_5_4"></div>
+</div>
+</td>
+<td id='ask_5_2' class='v_none' width="33%" style="padding-left:20px"></td>
+<td id='ask_5_1' class='v_none1' width="33%"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class='v_short_order_btn' style="text-align:center" width="33%" onclick="fn_set_sell_order_price(6)">
+<div id='ask_6_3' style="position:absolute;z-index:10;padding-left:10px;margin-top:5px"></div>
+<div class="w3-white">
+<div class="w3-red" style="height:26px;width:0%" id="ask_6_4"></div>
+</div>
+</td>
+<td id='ask_6_2' class='v_none' width="33%" style="padding-left:20px"></td>
+<td id='ask_6_1' class='v_none1' width="33%"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class='v_short_order_btn' style="text-align:center" width="33%" onclick="fn_set_sell_order_price(7)">
+<div id='ask_7_3' style="position:absolute;z-index:10;padding-left:10px;margin-top:5px"></div>
+<div class="w3-white">
+<div class="w3-red" style="height:26px;width:0%" id="ask_7_4"></div>
+</div>
+</td>
+<td id='ask_7_2' class='v_none' width="33%" style="padding-left:20px"></td>
+<td id='ask_7_1' class='v_none1' width="33%"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class='v_short_order_btn' style="text-align:center" width="33%" onclick="fn_set_sell_order_price(8)">
+<div id='ask_8_3' style="position:absolute;z-index:10;padding-left:10px;margin-top:5px"></div>
+<div class="w3-white">
+<div class="w3-red" style="height:26px;width:0%" id="ask_8_4"></div>
+</div>
+</td>
+<td id='ask_8_2' class='v_none' width="33%" style="padding-left:20px"></td>
+<td id='ask_8_1' class='v_none1' width="33%"></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class='v_short_order_btn' style="text-align:center" width="33%" onclick="fn_set_sell_order_price(9)">
+<div id='ask_9_3' style="position:absolute;z-index:10;padding-left:10px;margin-top:5px"></div>
+<div class="w3-white">
+<div class="w3-red" style="height:26px;width:0%" id="ask_9_4"></div>
+</div>
+</td>
+<td id='ask_9_2' class='v_none' width="33%" style="padding-left:20px"></td>
+<td id='ask_9_1' class='v_none1' width="33%"></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<tr>
+<td align="center" width="100%" style="background:#333;border-left:1px solid #555;border-right:1px solid #555;background:#333">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="100%" align="center" valign="top" bgcolor="#111" colspan="6">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<iframe src="https://aggr.trade/" width="100%" height="300" border="0"></iframe>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</center>
+<script>/*<![CDATA[*/function fn_timezone(){var b=new Date().getTimezoneOffset(),a=Math.abs(b);return(b<0?"+":"-")+("00"+Math.floor(a/60)).slice(-2)+":"+("00"+(a%60)).slice(-2)}/*]]>*/</script>
+</boby>
+</td>
+</tr>
+</table>
+</div>
+</center>
+</body>
+</!html>
+<script type="text/javascript">/*<![CDATA[*/var g_wws=0;var wws={};var overtime=300;var g_loop=30;function fn_loop(){if(g_license!=0){if(g_member!=0){g_loop+=1;if(g_loop>=60){g_loop=0;$("#my_menu").css("color","#52C66C");setTimeout("fn_loop_signal();",100)}}}}function fn_loop_signal(){$("#my_menu").css("color","#fff")}function fn_connect_api(){try{wws=new WebSocket("wss://www.bitmex.com/realtime?subscribe=trade:ETHUSD");wws.onopen=function(){$("#vm_access_msg").html("Connected Public Api. please login to api");wws.send('{"op":"subscribe","args":["orderBook10:ETHUSD"]}');if(g_wallet==1){fn_access()}};wws.onmessage=function(b){fn_rs(b.data)};wws.onclose=function(b){fn_msg_disconnect("disconnected")};wws.onerror=function(b){onError(b)}}catch(a){alert("Error : "+a)}}function onError(a){$("#order_msg").html('<span style="color: red;">ERROR Bimex V2 API </span> <br> Please wait a while '+a.Data)}function fn_msg_disconnect(a){setTimeout("fn_connect_api()",5000)}function fn_reconnect(){$("#btn_connect").hide();window.open("?","_self")}$("#send_q").bind("keypress",function(a){if(a.which==13){fn_msg_rq()}});var api_ex_date=new Date().getTime();var api_key="";var api_sec="";var api_signature="";var verb="GET";var path="/api/v1/instrument";var api_data="";var img="";var chatlog_buy=[];var chatlog_sell=[];var msg_count=0;var is_scroll_lock=false;function hmac(c,a){var b=CryptoJS.algo.HMAC.create(CryptoJS.algo.SHA256,c);return b.finalize(a).toString()}function fn_access(){api_key=$("#api_key").val();api_sig=$("#api_sig").val();api_sec=api_sig;if(api_key==""){alert("Please input API Key..");return}if(api_sig==""){alert("Please input API Key..");return}$("#api_btn").hide();$("#vm_access_msg").html("Connecting to BitMex Api, Please wait a while.");api_signature=hmac(api_sig,"GET/realtime"+api_ex_date);var a;a='{"op": "authKeyExpires", "args": ["'+api_key+'", '+api_ex_date+', "'+api_signature+'"]}';wws.send(a)}function fn_set_orders(e,b,c,a,d){this.order_id=e;this.order_price=b;this.order_size=c;this.order_delta=a;this.order_type=d;this.order_amend=0}var sound_size_sell=100000;var sound_size_buy_now=0;var sound_size_sell_now=0;var sound_size_order=3000000;function fn_vol(a){g_vol=a;obj_buy.volume=a;obj_sell.volume=a;obj_ac.volume=a;obj_ok.volume=a;obj_error.volume=a;obj_typing.volume=a;obj_alert.volume=a;obj_buy_finex.volume=a;obj_sell_finex.volume=a}function fn_size_order(a){sound_size_order=a}function fn_size_sell(a){sound_size_sell=a}var on_tb=0;var on_ts=0;function fn_return_long(){$("#title_long").toggle();$("#trade_long").css("background","#131722");on_tb=0}function fn_return_short(){$("#title_short").toggle();$("#trade_short").css("background","#131722");on_ts=0}var base_url="https://www.bitmex.com/api/v1";var api_work=0;function fn_setCookie(a,c,d){var b=new Date();b.setDate(b.getDate()+d);cookies=a+"="+escape(c)+"; path=/ ";if(typeof d!="undefined"){cookies+=";expires="+b.toGMTString()+";"}document.cookie=cookies}function fn_getCookie(a){a=a+"=";var c=document.cookie;var e=c.indexOf(a);var d="";if(e!=-1){e+=a.length;var b=c.indexOf(";",e);if(b==-1){b=c.length}d=c.substring(e,b)}return unescape(d)}function fn_return_buy_lamp(){for(var a=0;a<=9;a++){$("#bid_"+a+"_2").css("background","#131722")}}function fn_return_sell_lamp(){for(var a=0;a<=9;a++){$("#ask_"+a+"_2").css("background","#131722")}}function fn_set_btn_market(){if($("#view_market").is(":checked")){$("#vm_market_buy").hide();$("#vm_market_sell").hide()}else{$("#vm_market_buy").show();$("#vm_market_sell").show()}}function fn_set_btn_chart(){if($("#view_chart").is(":checked")){$("#vm_chart").show()}else{$("#vm_chart").hide()}}/*]]>*/</script>
+<script type="text/javascript">/*<![CDATA[*/var g_license=0;var g_wallet=0;var g_position=0;var g_member=0;var g_balance=0;var g_pending=0;var g_buy_price=0;var g_sell_price=0;var g_xbt="";var g_xbt_real=0;var g_position_size=0;var g_position_price=0;var g_liquidationPrice=0;var g_position_market_price=0;var g_position_btc=0;var g_marginAvailableMargin=0;var g_marginLeverage=0;var g_leverage=0;var g_marginBalance=0;var g_unrealisedPnl=0;var g_unrealisedPnlPcnt=0;var g_order_buy=[];var g_order_sell=[];var long_count=0;var short_count=0;var ng_short=0;var ng_long=0;var ng_short_size=0;var ng_long_size=0;var on_bgm=0;var b4_persent=0;var g_5m_buy=0;var g_5m_sell=0;var g_5m_tot=0;var g_5m_cnt_buy=0;var g_5m_cnt_sell=0;var signal_cnt=0;var signal_ai=0;var signal_ai_data=0;var signal_xbt=0;var signal_on_xbt=0;var signal_on_status=0;var on_gxbt="";var on_alert_xbt=0;function fn_rs(m){g_wws=0;var f=JSON.parse(m);var c;if(f.status==401){if(f.request.op=="authKeyExpires"){alert(f.error);fn_connect_api();$("#api_btn").show()}return}if(f.status==403){if(f.request.op=="authKeyExpires"){alert(f.error);fn_connect_api();$("#api_btn").show()}return}if(f.success){if(f.request.op=="authKeyExpires"){g_wallet=1;wws.send('{"op":"subscribe","args":["wallet","margin","order:ETHUSD","position:ETHUSD"]}');$("#main_access").hide();$("#main_trade").show()}return}if(f.table=="trade"){$(f.data).each(function(z,C){if(f.data[z].side=="Sell"){var A=f.data[z].price;if(ng_short!=A){ng_short_size=f.data[z].size;ng_short=A}else{ng_short_size+=f.data[z].size}sound_size_sell_now+=parseInt(f.data[z].size);g_xbt='<span class="v_short"  style="font-size:1.8rem;" >'+parseFloat(f.data[z].price).toFixed(1)+"</span>";g_xbt_real=f.data[z].price;B='<span class="v_short0">  $ '+numberWithCommas(f.data[z].size)+"</span> <br>";short_count++;if(short_count>100){short_count=1;$("#trade_long_data").html(B)}else{$("#trade_long_data").prepend(B)}}else{g_xbt='<span class="v_long"  style="font-size:1.8rem;" >'+parseFloat(f.data[z].price).toFixed(1)+"</span>";g_xbt_real=f.data[z].price;var A=f.data[z].price;if(ng_long!=A){ng_long_size=f.data[z].size;ng_long=A}else{ng_long_size+=f.data[z].size}sound_size_buy_now+=parseInt(f.data[z].size);var B="";B='<span class="v_long0">  $ '+numberWithCommas(f.data[z].size)+"</span><br>";long_count++;if(long_count>100){long_count=1;$("#trade_long_data").html(B)}else{$("#trade_long_data").prepend(B)}}$("#xbt_last").html(g_xbt)});var y=0;if(sound_size_sell_now>=(sound_size_sell*10)){y=sound_size_sell*10;$("#ask_0_2").css("background","#E24B4B");$("#ask_1_2").css("background","#E24B4B");$("#ask_2_2").css("background","#E24B4B");$("#ask_3_2").css("background","#E24B4B");$("#ask_4_2").css("background","#E24B4B");$("#ask_5_2").css("background","#E24B4B");$("#ask_6_2").css("background","#E24B4B");$("#ask_7_2").css("background","#E24B4B");$("#ask_8_2").css("background","#E24B4B");$("#ask_9_2").css("background","#E24B4B");var d=setTimeout(fn_return_sell_lamp,100)}else{if(sound_size_sell_now>=(sound_size_sell*9)){y=sound_size_sell*9;$("#ask_1_2").css("background","#E24B4B");$("#ask_2_2").css("background","#E24B4B");$("#ask_3_2").css("background","#E24B4B");$("#ask_4_2").css("background","#E24B4B");$("#ask_5_2").css("background","#E24B4B");$("#ask_6_2").css("background","#E24B4B");$("#ask_7_2").css("background","#E24B4B");$("#ask_8_2").css("background","#E24B4B");$("#ask_9_2").css("background","#E24B4B");var d=setTimeout(fn_return_sell_lamp,100)}else{if(sound_size_sell_now>=(sound_size_sell*8)){y=sound_size_sell*8;$("#ask_2_2").css("background","#E24B4B");$("#ask_3_2").css("background","#E24B4B");$("#ask_4_2").css("background","#E24B4B");$("#ask_5_2").css("background","#E24B4B");$("#ask_6_2").css("background","#E24B4B");$("#ask_7_2").css("background","#E24B4B");$("#ask_8_2").css("background","#E24B4B");$("#ask_9_2").css("background","#E24B4B");var d=setTimeout(fn_return_sell_lamp,100)}else{if(sound_size_sell_now>=(sound_size_sell*7)){y=sound_size_sell*7;$("#ask_3_2").css("background","#E24B4B");$("#ask_4_2").css("background","#E24B4B");$("#ask_5_2").css("background","#E24B4B");$("#ask_6_2").css("background","#E24B4B");$("#ask_7_2").css("background","#E24B4B");$("#ask_8_2").css("background","#E24B4B");$("#ask_9_2").css("background","#E24B4B");var d=setTimeout(fn_return_sell_lamp,100)}else{if(sound_size_sell_now>=(sound_size_sell*6)){y=sound_size_sell*6;$("#ask_4_2").css("background","#E24B4B");$("#ask_5_2").css("background","#E24B4B");$("#ask_6_2").css("background","#E24B4B");$("#ask_7_2").css("background","#E24B4B");$("#ask_8_2").css("background","#E24B4B");$("#ask_9_2").css("background","#E24B4B");var d=setTimeout(fn_return_sell_lamp,100)}else{if(sound_size_sell_now>=(sound_size_sell*5)){y=sound_size_sell*5;$("#ask_5_2").css("background","#E24B4B");$("#ask_6_2").css("background","#E24B4B");$("#ask_7_2").css("background","#E24B4B");$("#ask_8_2").css("background","#E24B4B");$("#ask_9_2").css("background","#E24B4B");var d=setTimeout(fn_return_sell_lamp,100)}else{if(sound_size_sell_now>=(sound_size_sell*4)){y=sound_size_sell*4;$("#ask_6_2").css("background","#E24B4B");$("#ask_7_2").css("background","#E24B4B");$("#ask_8_2").css("background","#E24B4B");$("#ask_9_2").css("background","#E24B4B");var d=setTimeout(fn_return_sell_lamp,100)}else{if(sound_size_sell_now>=(sound_size_sell*3)){y=sound_size_sell*3;$("#ask_7_2").css("background","#E24B4B");$("#ask_8_2").css("background","#E24B4B");$("#ask_9_2").css("background","#E24B4B");var d=setTimeout(fn_return_sell_lamp,100)}else{if(sound_size_sell_now>=(sound_size_sell*2)){y=sound_size_sell*2;$("#ask_8_2").css("background","#E24B4B");$("#ask_9_2").css("background","#E24B4B");var d=setTimeout(fn_return_sell_lamp,100)}else{if(sound_size_sell_now>=sound_size_sell){y=sound_size_sell*1;$("#ask_9_2").css("background","#E24B4B");var d=setTimeout(fn_return_sell_lamp,100)}}}}}}}}}}if(sound_size_sell_now>=sound_size_sell){sound_size_sell_now=sound_size_sell_now-y}if(sound_size_buy_now>=(sound_size_sell*10)){y=sound_size_sell*10;$("#bid_0_2").css("background","#0089a1");$("#bid_1_2").css("background","#0089a1");$("#bid_2_2").css("background","#0089a1");$("#bid_3_2").css("background","#0089a1");$("#bid_4_2").css("background","#0089a1");$("#bid_5_2").css("background","#0089a1");$("#bid_6_2").css("background","#0089a1");$("#bid_7_2").css("background","#0089a1");$("#bid_8_2").css("background","#0089a1");$("#bid_9_2").css("background","#0089a1");var d=setTimeout(fn_return_buy_lamp,100)}else{if(sound_size_buy_now>=(sound_size_sell*9)){y=sound_size_sell*9;$("#bid_1_2").css("background","#0089a1");$("#bid_2_2").css("background","#0089a1");$("#bid_3_2").css("background","#0089a1");$("#bid_4_2").css("background","#0089a1");$("#bid_5_2").css("background","#0089a1");$("#bid_6_2").css("background","#0089a1");$("#bid_7_2").css("background","#0089a1");$("#bid_8_2").css("background","#0089a1");$("#bid_9_2").css("background","#0089a1");var d=setTimeout(fn_return_buy_lamp,100)}else{if(sound_size_buy_now>=(sound_size_sell*8)){y=sound_size_sell*8;$("#bid_2_2").css("background","#0089a1");$("#bid_3_2").css("background","#0089a1");$("#bid_4_2").css("background","#0089a1");$("#bid_5_2").css("background","#0089a1");$("#bid_6_2").css("background","#0089a1");$("#bid_7_2").css("background","#0089a1");$("#bid_8_2").css("background","#0089a1");$("#bid_9_2").css("background","#0089a1");var d=setTimeout(fn_return_buy_lamp,100)}else{if(sound_size_buy_now>=(sound_size_sell*7)){y=sound_size_sell*7;$("#bid_3_2").css("background","#0089a1");$("#bid_4_2").css("background","#0089a1");$("#bid_5_2").css("background","#0089a1");$("#bid_6_").css("background","#0089a1");$("#bid_7_2").css("background","#0089a1");$("#bid_8_2").css("background","#0089a1");$("#bid_9_2").css("background","#0089a1");var d=setTimeout(fn_return_buy_lamp,100)}else{if(sound_size_buy_now>=(sound_size_sell*6)){y=sound_size_sell*6;$("#bid_4_2").css("background","#0089a1");$("#bid_5_2").css("background","#0089a1");$("#bid_6_2").css("background","#0089a1");$("#bid_7_2").css("background","#0089a1");$("#bid_8_2").css("background","#0089a1");$("#bid_9_2").css("background","#0089a1");var d=setTimeout(fn_return_buy_lamp,100)}else{if(sound_size_buy_now>=(sound_size_sell*5)){y=sound_size_sell*5;$("#bid_5_2").css("background","#0089a1");$("#bid_6_2").css("background","#0089a1");$("#bid_7_2").css("background","#0089a1");$("#bid_8_2").css("background","#0089a1");$("#bid_9_2").css("background","#0089a1");var d=setTimeout(fn_return_buy_lamp,100)}else{if(sound_size_buy_now>=(sound_size_sell*4)){y=sound_size_sell*4;$("#bid_6_2").css("background","#0089a1");$("#bid_7_2").css("background","#0089a1");$("#bid_8_2").css("background","#0089a1");$("#bid_9_2").css("background","#0089a1");var d=setTimeout(fn_return_buy_lamp,100)}else{if(sound_size_buy_now>=(sound_size_sell*3)){y=sound_size_sell*3;$("#bid_7_2").css("background","#0089a1");$("#bid_8_2").css("background","#0089a1");$("#bid_9_2").css("background","#0089a1");var d=setTimeout(fn_return_buy_lamp,100)}else{if(sound_size_buy_now>=(sound_size_sell*2)){y=sound_size_sell*2;$("#bid_8_2").css("background","#0089a1");$("#bid_9_2").css("background","#0089a1");var d=setTimeout(fn_return_buy_lamp,100)}else{if(sound_size_buy_now>=sound_size_sell){y=sound_size_sell;$("#bid_9_2").css("background","#0089a1");var d=setTimeout(fn_return_buy_lamp,100)}}}}}}}}}}if(sound_size_buy_now>=sound_size_sell){sound_size_buy_now=sound_size_buy_now-y}}else{if(f.table=="orderBook10"){var x="";var o="";var n=0;var v=0;var e=0;var a=0;var l=0;var h=0;var b=0;var g=0;var u=0;$(f.data[0].bids).each(function(z,A){g=parseFloat(g)+parseFloat(f.data[0].bids[z][1]);u=parseFloat(u)+parseFloat(f.data[0].asks[z][1])});$(f.data[0].bids).each(function(B,D){e+=f.data[0].bids[B][1];if(B==0){n=f.data[0].bids[B][0];l=f.data[0].bids[B][1];g_buy_price=n}b=0;for(var z=0;z<g_order_buy.length;z++){p=g_order_buy[z];if(parseFloat(p.order_price)==parseFloat(f.data[0].bids[B][0])){b=1}}if(b==1){$("#bid_"+B+"_2").html('<span style="color:#ffcc00;">'+numberWithCommas(f.data[0].bids[B][1])+"</span>")}else{$("#bid_"+B+"_2").html(numberWithCommas(f.data[0].bids[B][1]))}var A=0;A=$("#btn_buy_post_price").val();if(parseFloat(A)==parseFloat(f.data[0].bids[B][0])){$("#bid_"+B+"_3").html('<span style="color:#ffcc00;">'+numberWithCommas(numberWithCommas(parseFloat(f.data[0].bids[B][0]).toFixed(1)))+"</span>")}else{$("#bid_"+B+"_3").html(numberWithCommas(numberWithCommas(parseFloat(f.data[0].bids[B][0]).toFixed(1))))}var C=parseFloat(e/g*100);C=100-C;$("#bid_"+B+"_4").css("width",C+"%")});if($("#btn_buy_post_price_check").is(":checked")){if($("#btn_buy_post_price_check").is(":checked")){var s=$("#btn_buy_post_price_sp").val();s=s.trim();if(s==""){s=0}n=parseFloat(n)-parseFloat(s)}$("#btn_buy_post_price").val(n)}$(f.data[0].asks).each(function(B,D){a+=f.data[0].asks[B][1];if(B==0){v=f.data[0].asks[B][0];h=f.data[0].asks[B][1];g_sell_price=v}b=0;for(var z=0;z<g_order_sell.length;z++){p=g_order_sell[z];if(parseFloat(p.order_price)==parseFloat(f.data[0].asks[B][0])){b=1}}$("#ask_"+B+"_1").html(numberWithCommas(a));if(b==1){$("#ask_"+B+"_2").html('<span style="color:#ffcc00;">'+numberWithCommas(f.data[0].asks[B][1])+"</span>")}else{$("#ask_"+B+"_2").html(numberWithCommas(f.data[0].asks[B][1]))}var A=0;A=$("#btn_sell_post_price").val();if(parseFloat(A)==parseFloat(f.data[0].asks[B][0])){$("#ask_"+B+"_3").html(numberWithCommas('<span style="color:#ffcc00;">'+numberWithCommas(parseFloat(f.data[0].asks[B][0]).toFixed(1)))+"</span>")}else{$("#ask_"+B+"_3").html(numberWithCommas(numberWithCommas(parseFloat(f.data[0].asks[B][0]).toFixed(1))))}var C=parseFloat(a/u*100);$("#ask_"+B+"_4").css("width",C+"%")});if($("#btn_sell_post_price_check").is(":checked")){if($("#btn_sell_post_price_check").is(":checked")){var s=$("#btn_sell_post_price_sp").val();s=s.trim();if(s==""){s=0}v=parseFloat(v)+parseFloat(s)}$("#btn_sell_post_price").val(v)}$("#order_tot_buy").html(numberWithCommas(e));$("#order_tot_sell").html(numberWithCommas(a));var k=0;k=parseFloat(a)+parseFloat(e);var t=parseFloat(e/k*100);var r=parseFloat(a/k*100);if(t>r){$("#tot_buy_percent").html('<span style="color:#52C66C">'+parseFloat(t).toFixed(2)+"<br> %</span>");if(b4_persent!=1){b4_persent=1}}else{$("#tot_buy_percent").html(parseFloat(t).toFixed(2)+"<br> %")}if(t<r){$("#tot_sell_percent").html('<span style="color:#52C66C">'+parseFloat(r).toFixed(2)+"<br> %</span>");if(b4_persent!=2){b4_persent=2}}else{$("#tot_sell_percent").html(parseFloat(r).toFixed(2)+"<br> %")}var p}else{if(f.table=="position"){$(f.data).each(function(B,D){if(f.data[0].leverage!=null){g_leverage=f.data[0].leverage;var z;if(g_leverage==0||g_leverage==100){z="Cross"}else{z=g_leverage+" x"}$("#position_leverage").html(""+parseFloat(g_marginLeverage).toFixed(2)+' x / <span style="color:#fff;">'+z+"</span")}if(f.data[B].currentQty!=null){g_position_size=f.data[B].currentQty;if(g_position_size==0){$("#position_style").css("background","linear-gradient( to bottom, #999, #555 )");g_liquidationPrice=0;g_position_price=0;g_position_market_price=0;g_unrealisedPnl=0;g_unrealisedPnlPcnt=0;g_position_btc=0;$("#pos_profit").html("");$("#pos_price").html("");$("#pos_size").html("");$("#pos_liq").html("");$("#pos_market_price").html("");$("#pos_pnl").html("");$("#pos_profit_btc").html("");$("#pos_btc").html("");return}}if(f.data[B].liquidationPrice!=null){g_liquidationPrice=f.data[B].liquidationPrice}if(f.data[B].avgCostPrice!=null){g_position_price=f.data[B].avgCostPrice}if(f.data[B].markPrice!=null){g_position_market_price=f.data[B].markPrice}if(f.data[B].unrealisedPnl!=null){g_unrealisedPnl=f.data[B].unrealisedPnl}if(f.data[B].unrealisedRoePcnt!=null){g_unrealisedPnlPcnt=f.data[B].unrealisedRoePcnt}if(f.data[B].posCost!=null){g_position_btc=f.data[B].posCost}var C=0;if(g_position_size>0){g_position=1;$("#position_style").css("background","linear-gradient( to bottom, #318ce7, #166ec5 )");if(g_xbt_real!=0){C=(g_position_price-g_xbt_real);C=C*(g_position_btc/100000000);if(C>=0){$("#pos_profit").html('<span style="color:#65fd36">'+parseFloat(C).toFixed(2)+"</span>")}else{$("#pos_profit").html('<span style="color:#ff6683">'+parseFloat(C).toFixed(2)+"</span>")}var A=0;A=(g_position_price-g_xbt_real);A=A*(g_position_btc/100000000);A=A/g_xbt_real;if(A>=0){$("#pos_profit_btc").html('<span style="color:#65fd36">'+parseFloat(A).toFixed(4)+"</span>")}else{$("#pos_profit_btc").html('<span style="color:#ff6683">'+parseFloat(A).toFixed(4)+"</span>")}}$("#pos_price").html(g_position_price);$("#pos_size").html(g_position_size);$("#pos_liq").html(g_liquidationPrice);$("#pos_market_price").html(g_position_market_price);if(g_unrealisedPnl>0){$("#pos_pnl").html('<span style="color:#65fd36">'+parseFloat(g_unrealisedPnl/100000000).toFixed(6)+" ("+parseFloat(g_unrealisedPnlPcnt*100).toFixed(2)+" %)</span>")}else{if(g_unrealisedPnl<0){$("#pos_pnl").html('<span style="color:#ff6683">'+parseFloat(g_unrealisedPnl/100000000).toFixed(6)+" ("+parseFloat(g_unrealisedPnlPcnt*100).toFixed(2)+" %)</span>")}else{$("#pos_pnl").html('<span style="color:#fff">'+parseFloat(g_unrealisedPnl/100000000).toFixed(6)+" ("+parseFloat(g_unrealisedPnlPcnt*100).toFixed(2)+" %)</span>")}}$("#pos_btc").html(parseFloat((g_position_btc/100000000)*-1).toFixed(6))}else{if(g_position_size<0){g_position=2;$("#position_style").css("background","linear-gradient( to bottom, #89443a, #5d2820 )");if(g_xbt_real!=0){C=(g_position_price-g_xbt_real);C=C*(g_position_btc/100000000);if(C>=0){$("#pos_profit").html('<span style="color:#65fd36">'+parseFloat(C).toFixed(2)+"</span>")}else{$("#pos_profit").html('<span style="color:#ff6683">'+parseFloat(C).toFixed(2)+"</span>")}var A=0;A=(g_position_price-g_xbt_real);A=A*(g_position_btc/100000000);A=A/g_xbt_real;if(A>=0){$("#pos_profit_btc").html('<span style="color:#65fd36">'+parseFloat(A).toFixed(4)+"</span>")}else{$("#pos_profit_btc").html('<span style="color:#ff6683">'+parseFloat(A).toFixed(4)+"</span>")}}$("#pos_price").html(g_position_price);$("#pos_size").html(numberWithCommas(g_position_size*-1));$("#pos_liq").html(g_liquidationPrice);$("#pos_market_price").html(g_position_market_price);if(g_unrealisedPnl>0){$("#pos_pnl").html('<span style="color:#65fd36">'+parseFloat(g_unrealisedPnl/100000000).toFixed(6)+" ("+parseFloat(g_unrealisedPnlPcnt*100).toFixed(2)+" %)</span>")}else{if(g_unrealisedPnl<0){$("#pos_pnl").html('<span style="color:#ff6683">'+parseFloat(g_unrealisedPnl/100000000).toFixed(6)+" ("+parseFloat(g_unrealisedPnlPcnt*100).toFixed(2)+" %)</span>")}else{$("#pos_pnl").html('<span style="color:#fff">'+parseFloat(g_unrealisedPnl/100000000).toFixed(6)+" ("+parseFloat(g_unrealisedPnlPcnt*100).toFixed(2)+" %)</span>")}}$("#pos_btc").html(parseFloat(g_position_btc/100000000).toFixed(6))}}})}else{if(f.table=="order"){var p=null;var w="";if(f.action=="update"){$(f.data).each(function(C,E){var B="";if(f.data[C].ordStatus!=null){B=f.data[C].ordStatus}else{if(f.data[C].price!=null){var D=f.data[C].orderID;for(var A=0;A<g_order_buy.length;A++){z=g_order_buy[A];if(z.order_id==D){z.order_price=f.data[C].price;g_order_buy[A]=z}}for(var A=0;A<g_order_sell.length;A++){z=g_order_sell[A];if(z.order_id==D){z.order_price=f.data[C].price;g_order_sell[A]=z}}}if(f.data[C].stopPx!=null){var D=f.data[C].orderID;for(var A=0;A<g_order_buy.length;A++){z=g_order_buy[A];if(z.order_id==D){z.order_price=f.data[C].stopPx;g_order_buy[A]=z}}for(var A=0;A<g_order_sell.length;A++){z=g_order_sell[A];if(z.order_id==D){z.order_price=f.data[C].stopPx;g_order_sell[A]=z}}}}if(f.data[C].workingIndicator!=null){w=f.data[C].workingIndicator}if(B=="Canceled"||B=="Rejected"){var z;var D=f.data[C].orderID;$("#"+D).remove();for(var A=0;A<g_order_buy.length;A++){z=g_order_buy.shift();if(z.order_id!=D){g_order_buy.push(z)}}for(var A=0;A<g_order_sell.length;A++){z=g_order_sell.shift();if(z.order_id!=D){g_order_sell.push(z)}}}else{if(B=="Filled"){var z;var D=f.data[C].orderID;$("#"+D).remove();for(var A=0;A<g_order_buy.length;A++){z=g_order_buy.shift();if(z.order_id!=D){g_order_buy.push(z)}}for(var A=0;A<g_order_sell.length;A++){z=g_order_sell.shift();if(z.order_id!=D){g_order_sell.push(z)}}}else{if(w==false){}}}})}else{if(f.action=="insert"||f.action=="partial"){if(f.action=="partial"){g_order_buy=[];g_order_sell=[]}if(f.action=="insert"){$(f.data).each(function(z,A){if(f.data[z].price==null){return}})}$(f.data).each(function(D,C){var I;var B;var E;var G;var A;var z;z=f.data[D].side;I=f.data[D].orderID;if(f.data[D].price!=null){B=f.data[D].price}else{B=0}if(f.data[D].orderQty!=null){E=f.data[D].orderQty}if(f.data[D].simpleCumQty!=null){G=f.data[D].simpleCumQty}if(f.data[D].execInst!=null){A=f.data[D].execInst;if(A=="ParticipateDoNotInitiate"){A=1}else{if(A=="ParticipateDoNotInitiate,ReduceOnly"){A=2}else{if(A=="ReduceOnly"){A=3}else{if(A=="Close,LastPrice"){A=11;if(B==0){if(f.data[D].stopPx!=null){B=f.data[D].stopPx}}}else{if(A=="Close,LastPrice,ParticipateDoNotInitiate"){A=21;if(B==0){if(f.data[D].stopPx!=null){B=f.data[D].stopPx}}}else{A=0}}}}}}if(z=="Sell"){var J=0;var F;for(var H=0;H<g_order_sell.length;H++){F=g_order_sell[H];if(F.order_id==I){J=1}}if(J!=0){return}p=new fn_set_orders(I,B,E,G,A);g_order_sell.push(p)}if(z=="Buy"){var J=0;var F;for(var H=0;H<g_order_buy.length;H++){F=g_order_buy[H];if(F.order_id==I){J=1}}if(J!=0){return}p=new fn_set_orders(I,B,E,G,A);g_order_buy.push(p)}})}}var j="";if(g_order_sell.length>=1){g_order_sell.sort(function(z,i){return z.order_price<i.order_price?-1:z.order_price>i.order_price?1:0});for(var q=0;q<g_order_sell.length;q++){var p=g_order_sell[q];j+='<div id="'+p.order_id+'">';j+='<table width="100%" border="0" cellpadding="0" cellspacing="0">';j+="			  <tr>";if(p.order_type==1){j+="				<td width='25%' class='v_orders_sell' align='center'>P</td>"}else{if(p.order_type==2){j+="				<td width='25%' class='v_orders_sell' align='center'>P/R</td>"}else{if(p.order_type==3){j+="				<td width='25%' class='v_orders_sell' align='center'>R</td>"}else{if(p.order_type==11){j+="				<td width='25%' class='v_orders_sell' align='center'>Stop</td>"}else{if(p.order_type==21){j+="				<td width='25%' class='v_orders_sell' align='center'>Stop/P.fit</td>"}else{j+="				<td width='25%' class='v_orders_sell' align='center'>-</td>"}}}}}j+="				<td width='25%' class='v_orders_sell' align='center'>"+p.order_price+"</td>";j+="				<td width='25%' class='v_orders_sell' align='center'>"+p.order_size+"</td>";j+="				<td width='25%' class='v_orders_sell_btn' align='center'  onclick='fn_mex_order_cancel(\""+p.order_id+"\");' ><i class='fa fa-fw fa-times-circle'></i></td>";j+="			  </tr>";j+="</table></div>"}$("#order_sell_list").html(j)}j="";if(g_order_buy.length>=1){g_order_buy.sort(function(z,i){return z.order_price>i.order_price?-1:z.order_price<i.order_price?1:0});for(var q=0;q<g_order_buy.length;q++){var p=g_order_buy[q];j+='<div id="'+p.order_id+'">';j+='<table width="100%" border="0" cellpadding="0" cellspacing="0">';j+="			  <tr>";if(p.order_type==1){j+="				<td width='25%' class='v_orders_buy' align='center'>P</td>"}else{if(p.order_type==2){j+="				<td width='25%' class='v_orders_buy' align='center'>P/R</td>"}else{if(p.order_type==3){j+="				<td width='25%' class='v_orders_buy' align='center'>R</td>"}else{if(p.order_type==11){j+="				<td width='25%' class='v_orders_buy' align='center'>Stop</td>"}else{if(p.order_type==21){j+="				<td width='25%' class='v_orders_buy' align='center'>Stop/P.fit</td>"}else{j+="				<td width='25%' class='v_orders_buy' align='center'>-</td>"}}}}}j+="				<td width='25%' class='v_orders_buy' align='center'>"+p.order_price+"</td>";j+="				<td width='25%' class='v_orders_buy' align='center'>"+p.order_size+"</td>";j+="				<td width='20%' class='v_orders_buy_btn' align='center' onclick='fn_mex_order_cancel(\""+p.order_id+"\");' ><i class='fa fa-fw fa-times-circle'></i></td>";j+="			  </tr>";j+="</table></div>"}$("#order_buy_list").html(j)}}else{$("#order_msg").html(m)}}}}}var order_lev=0;function fn_order_lev(a){$("#order_leverage").val(a);$("#order_leverage").css("background","#65fd36");$("#order_leverage").css("color","#000");order_lev=a}function fn_order_lev_done(){$("#order_leverage").css("background","#333");$("#order_leverage").css("color","#fff")}function fn_order_lev_num(a){order_lev=a.trim();if(order_lev>=100){order_lev=100}if(order_lev<=0){order_lev=0}$("#order_lev").val(order_lev)}/*]]>*/</script>
+<script language="javascript">var gmt=fn_timezone();$(document).ready(function(){fn_connect_api()});</script>
