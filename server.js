@@ -2,9 +2,9 @@ var express = require("express");
 const https = require('https');
 var app = express();
 const fs = require('fs');
-const port = 8081;
+const port = 8080;
 
-app.use(express.static('public'));
+app.use(express.static('public_compression'));
 //make way for some custom css, js and images
 app.use('/css', express.static(__dirname + '/public/css'));
 app.use('/js', express.static(__dirname + '/public/js'));
